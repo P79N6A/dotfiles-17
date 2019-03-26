@@ -1,0 +1,4 @@
+#!/bin/bash
+# export PYTHONPATH='/Users/steven/Documents/web_main'
+# export DJANGO_SETTINGS_MODULE="webmain.settings.local"
+

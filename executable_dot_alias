@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#Applications
+alias c='code'
+alias vim='nvim'
+alias top='vtop -t seti'
+alias tmux='tmux -u'
+alias ctags='/usr/local/bin/ctags'
+
+#Shortcuts
+alias z='fasd_cd -d' # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+
+alias cl='clear && ls'
+alias cux='chmod u+x'
+#alias python='/usr/local/bin/python3'
+alias startpage='python2.7 -m SimpleHTTPServer 2343 &.'
+
+# program/script launch
+alias brightLow='ddcctl -d 1 -b 10'
+alias brightMed='ddcctl -d 1 -b 40'
+alias brightHi='ddcctl -d 1 -b 70'
+
+
+# media category
+# sonarr, radarr, plex, ...
+alias usenet-up='docker-compose -f ~/dotfiles/usenet-docker/docker-compose.yml up -d'
+alias usenet-down='docker-compose -f ~/dotfiles/usenet-docker/docker-compose.yml down'
+alias plex-up='docker-compose -f ~/dotfiles/plex-docker/docker-compose.yml up -d'
+alias plex-down='docker-compose -f ~/dotfiles/plex-docker/docker-compose.yml down'
+
+# SSH
+alias ku-binf='ssh -t ndv995@login.binf.ku.dk "zsh -i"'
+alias ku-popgen='ssh ndv995@ricco.popgen.dk'
+alias lsda-local='ssh lsda@127.0.0.1 -p 2323'
+alias lsda-azure='ssh group21@lsda21.eastus.cloudapp.azure.com'
+alias pi-service-home='ssh steven@192.168.1.109 -p 50667'
+export PATH="/usr/local/opt/sqlite/bin:$PATH"

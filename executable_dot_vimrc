@@ -1,0 +1,304 @@
+" INIT
+" ========================================
+set nocompatible
+filetype off
+
+set clipboard=unnamed
+set encoding=utf8
+set laststatus=2
+
+set number relativenumber              "Line numbers are good with relative numbers
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set nolist                      "don't render special chars (tabs, trails, ...)
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set showmatch                   "highlight matching brackets
+set gcr=a:blinkon0              "Disable cursor blink
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+set ruler                       "show the cursot position the whole time
+set ttyfast                     " fast terminal
+set lazyredraw
+set cursorline
+
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+" Make it obvious where 88 characters is
+set textwidth=88
+set colorcolumn=+1
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+    if (has("nvim"))
+        "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+    "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+    "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+    " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+endif
+
+
+"Performance improvments
+if has("mac")
+  set nocursorline
+
+  if exists("+relativenumber")
+    set norelativenumber
+  endif
+
+  set foldlevel=0
+  set foldmethod=manual
+endif
+
+"disable the arrow keys 
+nnoremap <up>    <nop>
+nnoremap <down>  <nop>
+nnoremap <left>  <nop>
+nnoremap <right> <nop>
+inoremap <up>    <nop>
+inoremap <down>  <nop>
+inoremap <left>  <nop>
+inoremap <right> <nop>
+
+
+"https://www.reddit.com/r/vim/comments/avlf18/i_just_got_into_vim_but_two_things_would_really/ehg7g3m
+nnoremap <silent> <leader>p       "*p
+nnoremap <silent> <leader>P       "*P
+xnoremap <silent> <leader>p       "*p
+
+nnoremap <silent> <leader>y       "*y
+nmap     <silent> <leader>Y       "*Y
+xnoremap <silent> <leader>y       "*y
+
+nnoremap          Y               y$
+
+
+" https://jeffkreeftmeijer.com/vim-number/
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before vundle starts loading all
+" the plugins.
+let mapleader=" "
+let maplocalleader = "\\"
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+
+" ========================================
+" TURN OFF SWAPFILES
+" ========================================
+set noswapfile
+set nobackup
+set nowb
+
+
+" ================ Indentation ======================
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4
+set smarttab
+set expandtab
+
+" Auto indent pasted text
+"nnoremap p p=`]<C-o>
+"nnoremap P P=`]<C-o>
+
+set nowrap       "Don't wrap lines
+set linebreak    "Wrap lines at convenient points
+
+
+" ================ Scrolling ========================
+set scrolloff=16        "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+
+" ================ Search ===========================
+set incsearch       " Find the next match as we type the search
+set hlsearch        " Highlight searches by default
+set ignorecase      " Ignore case when searching...
+set smartcase       " ...unless we type a capital
+nnoremap <silent> <leader>/ :noh<CR> " remove search highlightin until next searhc
+
+
+" ========================================
+" PYTHON CHECK
+" ========================================
+" check whether py2 or py3 should be used
+" py3 is now default
+" py2 can be started with vim --cmd 'let py2 = 1'
+"if exists('py2') && has('python')
+"elseif has('python3')
+"endif
+
+
+" ========================================
+" VIM PLUGIN CONFIGURATION
+" ========================================
+set rtp+=/usr/local/opt/fzf
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Utilities
+Plug 'tpope/vim-eunuch' "eunuch.vim: Helpers for UNIX
+Plug 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) and stages/undoes hunks.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "A command-line fuzzy finder
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion' "Vim motions on speed!
+Plug 'craigemery/vim-autotag' "Automatically discover and properly update ctags files on save
+Plug 'universal-ctags/ctags' "Generate tag files for source code
+Plug 'junegunn/goyo.vim' "Distraction-free writing in Vim. 
+Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
+Plug 'benmills/vimux' "vim plugin to interact with tmux
+Plug 'julienr/vim-cellmode' "Vim MATLAB-like cell execution for tmux/ipython
+Plug 'elzr/vim-json' "A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing
+Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
+Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
+Plug 'dusans/vim-hardmode'
+
+" Style
+Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air 
+Plug 'vim-airline/vim-airline-themes' " A collection of themes for vim-airline 
+Plug 'edkolev/tmuxline.vim' "Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration 
+Plug 'joshdick/onedark.vim' "A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+Plug 'ryanoasis/vim-devicons' "Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more 
+Plug 'luochen1990/rainbow' "Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration.
+
+" Tex
+Plug 'lervag/vimtex' "A modern vim plugin for editing LaTeX files.
+Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8 
+Plug 'tpope/vim-obsession' "continuously updated session files 
+
+" HTML
+Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
+
+" Javascript/Typescript
+Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim 
+Plug 'Quramy/tsuquyomi' "A Vim plugin for TypeScript 
+Plug 'pangloss/vim-javascript' "Vastly improved Javascript indentation and syntax support in Vim
+Plug 'mxw/vim-jsx' "React JSX syntax highlighting and indenting for vim
+
+
+" Completion / Snippets
+Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --omnisharp-completer'} "A code-completion engine for Vim
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+"" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-space>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+call plug#end()
+filetype plugin indent on
+
+"set term=screen-256color
+syntax on
+colorscheme onedark
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+autocmd ColorScheme * highlight Normal ctermbg=none
+autocmd ColorScheme * highlight NonText ctermbg=none
+
+" ========================================
+" PLUGIN CONFIGURATION
+" ========================================
+" YouCompleteMe
+let g:ycm_python_binary_path = 'python'
+let g:ycm_autoclose_preview_window_after_completion=1
+
+" Indent Guides
+"let g:indent_guides_enable_on_vim_startup = 1
+"set ts=2 sw=4 et
+"let g:indent_guides_start_level=2
+"let g:indent_guides_guide_size=1
+
+
+" GitGutter
+set updatetime=100
+
+" NERDtree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"map <leader>b :NERDTreeToggle<CR>
+
+"let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+" Tmuxline
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_preset = {
+            \'a'    : '#S',
+            \'b'    : ['#(whoami)', "#(ifconfig en0 | grep 'inet ' | awk '{print $2}')", '#(curl ipinfo.io/ip)'],
+            \'win'  : ['#I', '#W'],
+            \'cwin' : ['#I', '#W', '#F'],
+            \'y'    : ['%R', '#(date +"%d-%m-%y")'],
+            \'z'    : '#H'}
+
+
+
+"Rainbow Parentheses
+let g:rainbow_active = 1
+
+"Emmet
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+
+
+"Easy Motion
+"Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+map <Leader> <Plug>(easymotion-prefix)
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" Airline / Tmuxline
+let g:airline_theme='onedark'
+let g:airline#extensions#tmuxline#enabled = 0
+
+" CTRL-P
+"let g:ctrlp_working_path_mode = 'ra'
+
+" fzf
+
+nnoremap <silent> <leader>f :ProjectFiles<CR>
+nnoremap <silent> <leader><space> :Buffers<CR>
+nnoremap <silent> <leader>A :Windows<CR>
+nnoremap <silent> <leader>l :BLines<CR>
+nnoremap <silent> <leader>o :BTags<CR>
+nnoremap <silent> <leader>t :Tags<CR>
+nnoremap <silent> <leader>? :History<CR>
+nnoremap <silent> <leader>s :Rg<CR>
+
+set grepprg=rg\ --vimgrep
+
+" Search project root
+function! s:find_git_root()
+    return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+" Ctags
+let g:autotagTagsFile="tags"

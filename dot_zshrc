@@ -1,0 +1,43 @@
+# SET THEME
+ZSH_THEME="refined"
+
+# SET PLUGINS
+plugins=(zsh-syntax-highlighting sudo tmux zsh-completions)
+
+# TMUX PLUGIN SETTING
+export ZSH_TMUX_AUTOSTART=false
+export ZSH_TMUX_AUTOCONNECT=true
+
+# INIT ZSH / OH-MY-ZSH
+export ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# INIT TMUX PLUGIN
+# source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+
+# activate external shell plugins
+eval "$(fasd --init auto)"
+eval "$(thefuck --alias)"
+eval "$(pyenv init -)"
+
+# LOCALE SET
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# PATH ADDITIONS
+export PATH=$PATH:/opt/local/bin
+export PATH=~/Library/Python/3.7/bin:$PATH
+export PATH=$PATH:~/.local/bin
+export PATH=~/.poetry/bin:$PATH
+
+# ALIASES / ENV
+source ~/.alias
+source ~/.environ
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
