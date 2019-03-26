@@ -2,7 +2,7 @@
 	email = stevenpilger@fastmail.com
 	name = Steven Pilger
 [core]
-	excludesfile = /Users/steven/.gitignore_global
+	excludesfile = {{ .chezmoi.homedir }}/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -10,6 +10,6 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/steven/.stCommitMsg
+	template = {{ .chezmoi.homedir }}/.stCommitMsg
 [credential]
 	helper = osxkeychain
