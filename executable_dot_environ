@@ -1,4 +1,4 @@
 #!/bin/bash
 # export PYTHONPATH='/Users/steven/Documents/web_main'
 # export DJANGO_SETTINGS_MODULE="webmain.settings.local"
-
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'

@@ -11,6 +11,8 @@ alias ctags='/usr/local/bin/ctags'
 alias z='fasd_cd -d' # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 
+alias se='find ~/scripts -type f | fzf --preview="head {}" --preview-window=right:70%:wrap | xargs $EDITOR'
+
 alias cl='clear && ls'
 alias cux='chmod u+x'
 #alias python='/usr/local/bin/python3'
@@ -20,6 +22,10 @@ alias startpage='python2.7 -m SimpleHTTPServer 2343 &.'
 alias brightLow='ddcctl -d 1 -b 10'
 alias brightMed='ddcctl -d 1 -b 40'
 alias brightHi='ddcctl -d 1 -b 70'
+
+# chezmoi dotfiles
+alias ce='chezmoi edit'
+alias ca='chezmoi add'
 
 
 # media category
