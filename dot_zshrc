@@ -2,7 +2,7 @@
 ZSH_THEME="refined"
 
 # SET PLUGINS
-plugins=(zsh-syntax-highlighting sudo tmux zsh-completions)
+plugins=(zsh-syntax-highlighting sudo tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
 
 # TMUX PLUGIN SETTING
 export ZSH_TMUX_AUTOSTART=false
