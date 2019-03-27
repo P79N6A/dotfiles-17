@@ -22,7 +22,7 @@ set ttyfast                     " fast terminal
 set lazyredraw
 set cursorline
 
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 " Make it obvious where 88 characters is
 set textwidth=88
@@ -168,13 +168,18 @@ Plug 'easymotion/vim-easymotion' "Vim motions on speed!
 Plug 'craigemery/vim-autotag' "Automatically discover and properly update ctags files on save
 Plug 'universal-ctags/ctags' "Generate tag files for source code
 Plug 'junegunn/goyo.vim' "Distraction-free writing in Vim. 
-Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
 Plug 'benmills/vimux' "vim plugin to interact with tmux
 Plug 'julienr/vim-cellmode' "Vim MATLAB-like cell execution for tmux/ipython
 Plug 'elzr/vim-json' "A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing
 Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
 Plug 'dusans/vim-hardmode'
+
+" Commenting
+Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
+Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
+Plug 'kana/vim-repeat' "Vim plugin: Enable to repeat last change by non built-in commands
+Plug 'shougo/context_filetype.vim' "Context filetype library for Vim script
 
 " Style
 Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air 
