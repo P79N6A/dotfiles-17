@@ -40,5 +40,5 @@ alias ku-binf='ssh -t ndv995@login.binf.ku.dk "zsh -i"'
 alias ku-popgen='ssh ndv995@ricco.popgen.dk'
 alias lsda-local='ssh lsda@127.0.0.1 -p 2323'
 alias lsda-azure='ssh group21@lsda21.eastus.cloudapp.azure.com'
-alias pi-service-home='ssh steven@192.168.1.109 -p 50667'
+alias pi-service-home='ssh {{ .chezmoi.username }}@192.168.1.109 -p 50667'
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
