@@ -42,3 +42,10 @@ alias lsda-local='ssh lsda@127.0.0.1 -p 2323'
 alias lsda-azure='ssh group21@lsda21.eastus.cloudapp.azure.com'
 alias pi-service-home='ssh {{ .chezmoi.username }}@192.168.1.109 -p 50667'
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+{{- if eq .chezmoi.hostname "PTGDK-MBPro" }}
+alias test-server='ssh ptgdk@srv50211.global.leo-group.net'
+alias binf-server='ssh ptgdk@srv50161.global.leo-group.net'
+alias web-server='ssh ptgdk@DKLX002.global.leo-group.net'
+alias mount_binf='echo $PASSWORDENV | sshfs -o reconnect,password_stdin ptgdk@srv50161.global.leo-group.net:/ ~/binf -ovolname=binf'p
+{{- end }}
