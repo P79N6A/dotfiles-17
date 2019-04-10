@@ -97,13 +97,16 @@ augroup END
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=" "
-let maplocalleader = "\\"
+let maplocalleader = ","
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
+let $M="~/.local/share/chezmoi/executable_dot_vimrc"
+map <leader>re :execute "edit " . $M<CR>
+map <leader>rs :execute "source " . $M<CR>
 
 " ========================================
 " TURN OFF SWAPFILES
@@ -114,11 +117,11 @@ set nowb
 
 
 " ================ Indentation ======================
-set tabstop=8
-set softtabstop=0
-set shiftwidth=4
-set smarttab
-set expandtab
+" set expandtab
+" set smarttab
+" set autoindent
+" set shiftwidth=4
+
 
 " Auto indent pasted text
 "nnoremap p p=`]<C-o>
@@ -174,12 +177,18 @@ Plug 'elzr/vim-json' "A better JSON for Vim: distinct highlighting of keywords v
 Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
 Plug 'dusans/vim-hardmode'
+Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
+Plug 'tpope/vim-surround' "quoting/parenthesizing made simple
+Plug 'scrooloose/nerdtree' "A tree explorer plugin for vim
+Plug 'tpope/vim-sleuth' "detect indentation
+Plug 'ciaranm/detectindent'
 
 " Commenting
 Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
-Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
+" Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
 Plug 'kana/vim-repeat' "Vim plugin: Enable to repeat last change by non built-in commands
 Plug 'shougo/context_filetype.vim' "Context filetype library for Vim script
+Plug 'tpope/vim-commentary' "comment stuff out 
 
 " Style
 Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air 
@@ -200,19 +209,22 @@ Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
 " Javascript/Typescript
 Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim 
 Plug 'Quramy/tsuquyomi' "A Vim plugin for TypeScript 
-Plug 'pangloss/vim-javascript' "Vastly improved Javascript indentation and syntax support in Vim
-Plug 'mxw/vim-jsx' "React JSX syntax highlighting and indenting for vim
+Plug 'othree/yajs.vim' "YAJS.vim: Yet Another JavaScript Syntax for Vim 
+Plug 'othree/es.next.syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'posva/vim-vue'
 
 
 " Completion / Snippets
+Plug 'vim-syntastic/syntastic' "Syntax checking hacks for vim
 Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --omnisharp-completer'} "A code-completion engine for Vim
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-space>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 call plug#end()
 filetype plugin indent on
@@ -238,16 +250,27 @@ let g:ycm_autoclose_preview_window_after_completion=1
 "let g:indent_guides_start_level=2
 "let g:indent_guides_guide_size=1
 
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = 'yarn lint'
 
 " GitGutter
 set updatetime=100
 
 " NERDtree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"map <leader>b :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <c-b> :NERDTreeToggle<CR>
 
-"let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Tmuxline
 let g:tmuxline_powerline_separators = 0
