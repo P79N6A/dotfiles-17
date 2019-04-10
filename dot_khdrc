@@ -3,3 +3,4 @@ cmd + alt + ctrl - r : khd -e "reload"
 
 cmd + ctrl - return : open /Applications/Alacritty.app
 cmd + ctrl - f : open /Applications/Firefox.app
+cmd + ctrl - s : open /Applications/Sourcetree.app
