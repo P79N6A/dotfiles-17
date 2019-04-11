@@ -61,7 +61,7 @@ if has("mac")
   set foldmethod=manual
 endif
 
-"disable the arrow keys 
+"disable the arrow keys
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
 nnoremap <left>  <nop>
@@ -91,11 +91,7 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
+" leader
 let mapleader=" "
 let maplocalleader = ","
 
@@ -170,53 +166,53 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion' "Vim motions on speed!
 Plug 'craigemery/vim-autotag' "Automatically discover and properly update ctags files on save
 Plug 'universal-ctags/ctags' "Generate tag files for source code
-Plug 'junegunn/goyo.vim' "Distraction-free writing in Vim. 
+Plug 'junegunn/goyo.vim' "Distraction-free writing in Vim.
 Plug 'benmills/vimux' "vim plugin to interact with tmux
 Plug 'julienr/vim-cellmode' "Vim MATLAB-like cell execution for tmux/ipython
-Plug 'elzr/vim-json' "A better JSON for Vim: distinct highlighting of keywords vs values, JSON-specific (non-JS) warnings, quote concealing
 Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
 Plug 'dusans/vim-hardmode'
-Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
 Plug 'tpope/vim-surround' "quoting/parenthesizing made simple
 Plug 'scrooloose/nerdtree' "A tree explorer plugin for vim
 Plug 'tpope/vim-sleuth' "detect indentation
 Plug 'ciaranm/detectindent'
+Plug 'tpope/vim-obsession' "continuously updated session files
 
 " Commenting
 Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
-" Plug 'scrooloose/nerdcommenter' "Vim plugin for intensely orgasmic commenting
 Plug 'kana/vim-repeat' "Vim plugin: Enable to repeat last change by non built-in commands
 Plug 'shougo/context_filetype.vim' "Context filetype library for Vim script
-Plug 'tpope/vim-commentary' "comment stuff out 
+Plug 'tpope/vim-commentary' "comment stuff out
 
 " Style
-Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air 
-Plug 'vim-airline/vim-airline-themes' " A collection of themes for vim-airline 
-Plug 'edkolev/tmuxline.vim' "Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration 
+Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline-themes' " A collection of themes for vim-airline
+Plug 'edkolev/tmuxline.vim' "Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
 Plug 'joshdick/onedark.vim' "A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
-Plug 'ryanoasis/vim-devicons' "Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more 
+Plug 'ryanoasis/vim-devicons' "Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
 Plug 'luochen1990/rainbow' "Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration.
 
 " Tex
 Plug 'lervag/vimtex' "A modern vim plugin for editing LaTeX files.
-Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8 
-Plug 'tpope/vim-obsession' "continuously updated session files 
+Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8
+
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " HTML
 Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
 
 " Javascript/Typescript
-Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim 
-Plug 'Quramy/tsuquyomi' "A Vim plugin for TypeScript 
-Plug 'othree/yajs.vim' "YAJS.vim: Yet Another JavaScript Syntax for Vim 
+Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
+Plug 'Quramy/tsuquyomi' "A Vim plugin for TypeScript
+Plug 'othree/yajs.vim' "YAJS.vim: Yet Another JavaScript Syntax for Vim
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'posva/vim-vue'
 
-
 " Completion / Snippets
-Plug 'vim-syntastic/syntastic' "Syntax checking hacks for vim
+Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
 Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --omnisharp-completer'} "A code-completion engine for Vim
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -244,23 +240,45 @@ autocmd ColorScheme * highlight NonText ctermbg=none
 let g:ycm_python_binary_path = 'python'
 let g:ycm_autoclose_preview_window_after_completion=1
 
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+  endif
+let g:ycm_semantic_triggers.tex = ['@']
+
 " Indent Guides
 "let g:indent_guides_enable_on_vim_startup = 1
 "set ts=2 sw=4 et
 "let g:indent_guides_start_level=2
 "let g:indent_guides_guide_size=1
 
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" pandoc
+let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#biblio#bibs = '/Users/steven/Dropbox/2-STUDIES/0-Literature/bib.bib'
+let g:pandoc#command#autoexec_on_writes = 1
+let g:pandoc#command#autoexec_command = "Pandoc latex --biblatex"
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'yarn lint'
+" ALE
+let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
+
+" Syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = 'yarn lint'
 
 " GitGutter
 set updatetime=100
