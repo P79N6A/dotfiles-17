@@ -252,6 +252,7 @@ let g:ycm_semantic_triggers.tex = ['@']
 "let g:indent_guides_guide_size=1
 
 " pandoc
+let g:pandoc#filetypes#handled = ["markdown"]
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#biblio#bibs = '/Users/steven/Dropbox/2-STUDIES/0-Literature/bib.bib'
 let g:pandoc#command#autoexec_on_writes = 1
