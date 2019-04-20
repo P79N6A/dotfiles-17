@@ -167,11 +167,10 @@ Plug 'easymotion/vim-easymotion' "Vim motions on speed!
 Plug 'craigemery/vim-autotag' "Automatically discover and properly update ctags files on save
 Plug 'universal-ctags/ctags' "Generate tag files for source code
 Plug 'junegunn/goyo.vim' "Distraction-free writing in Vim.
-Plug 'benmills/vimux' "vim plugin to interact with tmux
-Plug 'julienr/vim-cellmode' "Vim MATLAB-like cell execution for tmux/ipython
+" Plug 'benmills/vimux' "vim plugin to interact with tmux
 Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
-Plug 'dusans/vim-hardmode'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'} "Interactive command execution in Vim
+" Plug 'dusans/vim-hardmode'
 Plug 'tpope/vim-surround' "quoting/parenthesizing made simple
 Plug 'scrooloose/nerdtree' "A tree explorer plugin for vim
 Plug 'tpope/vim-sleuth' "detect indentation
@@ -204,8 +203,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
 
 " Javascript/Typescript
-Plug 'leafgarland/typescript-vim' "Typescript syntax files for Vim
-Plug 'Quramy/tsuquyomi' "A Vim plugin for TypeScript
 Plug 'othree/yajs.vim' "YAJS.vim: Yet Another JavaScript Syntax for Vim
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -213,7 +210,7 @@ Plug 'posva/vim-vue'
 
 " Completion / Snippets
 Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
-Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer --omnisharp-completer'} "A code-completion engine for Vim
+Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer'} "A code-completion engine for Vim
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -348,6 +345,9 @@ function! s:find_git_root()
 endfunction
 
 command! ProjectFiles execute 'Files' s:find_git_root()
+
+" DetectIndent
+autocmd BufReadPost * :DetectIndent
 
 " Ctags
 let g:autotagTagsFile="tags"
