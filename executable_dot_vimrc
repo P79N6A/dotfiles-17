@@ -160,7 +160,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Utilities
 Plug 'tpope/vim-eunuch' "eunuch.vim: Helpers for UNIX
-Plug 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) and stages/undoes hunks.
+" Plug 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) and stages/undoes hunks.
+Plug 'mhinz/vim-signify'  " Show a diff using Vim its sign column.
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } "A command-line fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion' "Vim motions on speed!
@@ -203,6 +204,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
 
 " Javascript/Typescript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'othree/yajs.vim' "YAJS.vim: Yet Another JavaScript Syntax for Vim
 Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -210,7 +213,8 @@ Plug 'posva/vim-vue'
 
 " Completion / Snippets
 Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
-Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer'} "A code-completion engine for Vim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " Dark powered asynchronous completion framework for neovim/Vim8
+" Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer'} "A code-completion engine for Vim
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -234,13 +238,23 @@ autocmd ColorScheme * highlight NonText ctermbg=none
 " PLUGIN CONFIGURATION
 " ========================================
 " YouCompleteMe
-let g:ycm_python_binary_path = 'python'
-let g:ycm_autoclose_preview_window_after_completion=1
+" let g:ycm_python_binary_path = 'python'
+" let g:ycm_autoclose_preview_window_after_completion=1
+" if !exists('g:ycm_semantic_triggers')
+"     let g:ycm_semantic_triggers = {}
+"   endif
+" let g:ycm_semantic_triggers.tex = ['@']
 
-if !exists('g:ycm_semantic_triggers')
-    let g:ycm_semantic_triggers = {}
-  endif
-let g:ycm_semantic_triggers.tex = ['@']
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+" remap keys for up/down in list to j/k when popup is visible
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <tab> pumvisible() ? "\<C-n>" : "\<tab>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+call deoplete#custom#option({
+\ 'max_list': 30,
+\ })
 
 " Indent Guides
 "let g:indent_guides_enable_on_vim_startup = 1
@@ -252,21 +266,40 @@ let g:ycm_semantic_triggers.tex = ['@']
 let g:pandoc#filetypes#handled = ["markdown"]
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#biblio#bibs = '/Users/steven/Dropbox/2-STUDIES/0-Literature/bib.bib'
-let g:pandoc#command#autoexec_on_writes = 1
+let g:pandoc#command#autoexec_on_writes = 0
 let g:pandoc#command#autoexec_command = "Pandoc latex --biblatex"
 
 " ALE
 let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
-let g:ale_linters = {'vue': ['eslint', 'vls']}
+let g:ale_linters = {
+\  'vue': ['eslint', 'vls'],
+\   'typescript': ['tsserver', 'tslint'],
+\}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
 \   'vue': ['prettier', 'eslint'],
-\   'css': ['prettier']
+\   'scss': ['prettier'],
+\   'css': ['prettier'],
+\   'ts': ['prettier'],
 \}
-let g:ale_fix_on_save = 1
+
+let g:ale_enabled = 1
 let g:ale_sign_column_always = 1
+
+" when to lint
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+" let g:ale_open_list = 1
 let g:airline#extensions#ale#enabled = 1
+
+" Typescript
+" Disable Syntax/Semantics checks from this plugin (ALE is used for that)
+let g:nvim_typescript#diagnostics_enable = 0
 
 " Syntastic
 " set statusline+=%#warningmsg#
@@ -281,7 +314,7 @@ let g:airline#extensions#ale#enabled = 1
 " let g:syntastic_javascript_eslint_exe = 'yarn lint'
 
 " GitGutter
-set updatetime=100
+" set updatetime=100
 
 " NERDtree
 autocmd StdinReadPre * let s:std_in=1
