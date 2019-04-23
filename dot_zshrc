@@ -2,7 +2,14 @@
 ZSH_THEME="refined"
 
 # SET PLUGINS
-plugins=(zsh-syntax-highlighting sudo tmux zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(\
+	sudo\
+	tmux\
+	zsh-completions\
+	zsh-autosuggestions\
+	zsh-syntax-highlighting\
+	)
+autoload -U compinit && compinit
 
 # TMUX PLUGIN SETTING
 export ZSH_TMUX_AUTOSTART=false
@@ -26,9 +33,8 @@ export LC_ALL=en_US.UTF-8
 
 # PATH ADDITIONS
 export PATH=$PATH:/opt/local/bin
-export PATH=~/Library/Python/3.7/bin:$PATH
-export PATH=$PATH:~/.local/bin
 export PATH=~/.poetry/bin:$PATH
+export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
 
 # ALIASES / ENV
 source ~/.alias
