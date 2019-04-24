@@ -237,6 +237,8 @@ highlight NonText ctermbg=none
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight NonText ctermbg=none
 
+map <c-c> :bd<CR>
+
 " ========================================
 " PLUGIN CONFIGURATION
 " ========================================
@@ -336,15 +338,12 @@ let g:tmuxline_preset = {
             \'y'    : ['%R', '#(date +"%d-%m-%y")'],
             \'z'    : '#H'}
 
-
-
 "Rainbow Parentheses
 let g:rainbow_active = 1
 
 "Emmet
 "let g:user_emmet_install_global = 0
 "autocmd FileType html,css EmmetInstall
-
 
 "Easy Motion
 "Turn on case insensitive feature
@@ -358,12 +357,15 @@ map <Leader>k <Plug>(easymotion-k)
 " Airline / Tmuxline
 let g:airline_theme='onedark'
 let g:airline#extensions#tmuxline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tagbar#enabled = 1
 
 " CTRL-P
 "let g:ctrlp_working_path_mode = 'ra'
 
 " fzf
-
 nnoremap <silent> <leader>f :ProjectFiles<CR>
 nnoremap <silent> <leader><space> :Buffers<CR>
 nnoremap <silent> <leader>A :Windows<CR>
@@ -373,6 +375,7 @@ nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>? :History<CR>
 nnoremap <silent> <leader>s :Rg<CR>
 
+let g:fzf_tags_command = 'ctags -Ra -f tags .'
 set grepprg=rg\ --vimgrep
 
 " Search project root
