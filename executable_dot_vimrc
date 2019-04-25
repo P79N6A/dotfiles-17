@@ -180,6 +180,7 @@ Plug 'scrooloose/nerdtree' "A tree explorer plugin for vim
 Plug 'tpope/vim-sleuth' "detect indentation
 Plug 'ciaranm/detectindent'
 Plug 'tpope/vim-obsession' "continuously updated session files
+Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal
 
 " Commenting
 Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
@@ -384,11 +385,25 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " Airline / Tmuxline
+let g:airline_section_c = ''
 let g:airline_theme='onedark'
 let g:airline#extensions#tmuxline#enabled = 0
+
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#formatter = 'short_path'
 let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+
 let g:airline#extensions#tagbar#enabled = 1
 
 " CTRL-P
@@ -400,7 +415,7 @@ nnoremap <silent> <leader><space> :Buffers<CR>
 nnoremap <silent> <leader>A :Windows<CR>
 nnoremap <silent> <leader>l :BLines<CR>
 nnoremap <silent> <leader>o :BTags<CR>
-nnoremap <silent> <leader>t :Tags<CR>
+" nnoremap <silent> <leader>t :Tags<CR>
 nnoremap <silent> <leader>? :History<CR>
 nnoremap <silent> <leader>s :Rg<CR>
 
