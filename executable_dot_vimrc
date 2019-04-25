@@ -104,6 +104,9 @@ let $M="~/.local/share/chezmoi/executable_dot_vimrc"
 map <leader>re :execute "edit " . $M<CR>
 map <leader>rs :execute "source " . $M<CR>
 
+nnoremap <silent> <leader>t :tabnext<CR>
+nnoremap <silent> <leader>T :tabprevious<CR>
+
 " ========================================
 " TURN OFF SWAPFILES
 " ========================================
