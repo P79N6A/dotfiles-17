@@ -238,6 +238,7 @@ syntax on
 colorscheme onedark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+highlight Comment cterm=italic gui=italic
 autocmd ColorScheme * highlight Normal ctermbg=none
 autocmd ColorScheme * highlight NonText ctermbg=none
 
