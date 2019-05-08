@@ -207,6 +207,9 @@ Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+" Python
+Plug 'python/black' "The uncompromising Python code formatter
+
 " HTML
 Plug 'mattn/emmet-vim' "the essential toolkit for web-developers
 
