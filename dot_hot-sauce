@@ -21,4 +21,4 @@ for font in ${NERDFONTS[@]}; do
     fi
 done
 
-chezmoi init --apply --verbose https://github.com/steven-pilger/dotfiles.git
+# chezmoi init --apply --verbose https://github.com/steven-pilger/dotfiles.git
