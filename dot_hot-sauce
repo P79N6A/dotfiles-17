@@ -21,4 +21,7 @@ for font in ${NERDFONTS[@]}; do
     fi
 done
 
+# poetry
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
 # chezmoi init --apply --verbose https://github.com/steven-pilger/dotfiles.git
