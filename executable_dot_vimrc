@@ -116,11 +116,7 @@ set nowb
 
 
 " ================ Indentation ======================
-" set expandtab
-" set smarttab
-" set autoindent
-" set shiftwidth=4
-
+set expandtab
 
 " Auto indent pasted text
 "nnoremap p p=`]<C-o>
@@ -282,8 +278,8 @@ call deoplete#custom#var('around', {
 
 
 " Python nvim environment
-let g:python_host_prog = '/Users/ptgdk/.pyenv/versions/2.7.16/bin/python'
-let g:python3_host_prog = '/Users/ptgdk/.pyenv/versions/3.7.0/bin/python'
+let g:python_host_prog = '~/.pyenv/versions/2.7.16/bin/python'
+let g:python3_host_prog = '/Users/steven/.pyenv/versions/3.7.0/bin/python'
 
 " Indent Guides
 "let g:indent_guides_enable_on_vim_startup = 1
