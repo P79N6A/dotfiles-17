@@ -5,3 +5,4 @@ cmd + ctrl - return : open /Applications/Alacritty.app
 cmd + ctrl - f : open /Applications/Firefox.app
 cmd + ctrl - s : open /Applications/Sourcetree.app
 cmd + ctrl - t : open /Applications/Things3.app
+cmd + ctrl - d : open /Applications/Dash.app
