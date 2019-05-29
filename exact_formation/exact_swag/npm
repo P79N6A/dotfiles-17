@@ -2,3 +2,4 @@ eslint::eslint
 vtop
 neovim
 @vue/cli
+gitmoji-cli

@@ -5,6 +5,7 @@ ZSH_THEME="refined"
 plugins=(\
 	sudo\
 	tmux\
+	git-flow-completion\
 	zsh-completions\
 	zsh-autosuggestions\
 	zsh-syntax-highlighting\

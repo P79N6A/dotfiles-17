@@ -16,6 +16,7 @@ flake8
 fzf
 gdal
 git
+git-flow-avh
 gspell
 handbrake
 heroku/brew/heroku
