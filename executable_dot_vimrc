@@ -253,6 +253,8 @@ elseif hr >= 0
 colorscheme onehalfdark
 endif
 
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 " one dark
 " colorscheme onedark
 " highlight Normal ctermbg=none
