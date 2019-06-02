@@ -7,7 +7,7 @@ set clipboard=unnamed
 set encoding=utf8
 set laststatus=2
 
-set number relativenumber              "Line numbers are good with relative numbers
+set number relativenumber       "Line numbers are good with relative numbers
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set nolist                      "don't render special chars (tabs, trails, ...)
@@ -48,6 +48,12 @@ if (empty($TMUX))
     endif
 endif
 
+" Enable true color 启用终端24位色
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 "Performance improvments
 if has("mac")
@@ -191,7 +197,8 @@ Plug 'tpope/vim-commentary' "comment stuff out
 Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes' " A collection of themes for vim-airline
 Plug 'edkolev/tmuxline.vim' "Simple tmux statusline generator with support for powerline symbols and statusline / airline / lightline integration
-Plug 'joshdick/onedark.vim' "A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+" Plug 'joshdick/onedark.vim' "A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'ryanoasis/vim-devicons' "Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
 Plug 'luochen1990/rainbow' "Rainbow Parentheses Improved, shorter code, no level limit, smooth and fast, powerful configuration.
 
@@ -234,14 +241,18 @@ let g:UltiSnipsExpandTrigger="<c-space>"
 call plug#end()
 filetype plugin indent on
 
-"set term=screen-256color
 syntax on
-colorscheme onedark
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight Comment cterm=italic gui=italic
-autocmd ColorScheme * highlight Normal ctermbg=none
-autocmd ColorScheme * highlight NonText ctermbg=none
+" onehalf dark/light
+colorscheme onehalflight
+" colorscheme onehalfdark
+
+" one dark
+" colorscheme onedark
+" highlight Normal ctermbg=none
+" highlight NonText ctermbg=none
+" highlight Comment cterm=italic gui=italic
+" autocmd ColorScheme * highlight Normal ctermbg=none
+" autocmd ColorScheme * highlight NonText ctermbg=none
 
 map <c-c> :bd<CR>
 
@@ -399,7 +410,8 @@ map <Leader>k <Plug>(easymotion-k)
 
 " Airline / Tmuxline
 let g:airline_section_c = ''
-let g:airline_theme='onedark'
+" let g:airline_theme='onedark'
+let g:airline_theme='onehalfdark'
 let g:airline#extensions#tmuxline#enabled = 0
 
 let g:airline#extensions#tabline#enabled = 1
