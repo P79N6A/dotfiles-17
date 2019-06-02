@@ -243,8 +243,15 @@ filetype plugin indent on
 
 syntax on
 " onehalf dark/light
+"Change theme depending on the time of day
+let hr = (strftime('%H'))
+if hr >= 19
+colorscheme onehalfdark
+elseif hr >= 8
 colorscheme onehalflight
-" colorscheme onehalfdark
+elseif hr >= 0
+colorscheme onehalfdark
+endif
 
 " one dark
 " colorscheme onedark
