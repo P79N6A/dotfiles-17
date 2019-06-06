@@ -251,10 +251,13 @@ syntax on
 "Change theme depending on the time of day
 let hr = (strftime('%H'))
 if hr >= 19
+let g:airline_theme='onehalfdark'
 colorscheme onehalfdark
 elseif hr >= 8
+let g:airline_theme='onehalflight'
 colorscheme onehalflight
 elseif hr >= 0
+let g:airline_theme='onehalfdark'
 colorscheme onehalfdark
 endif
 
@@ -427,7 +430,7 @@ map <Leader>k <Plug>(easymotion-k)
 let g:airline_section_c = ''
 " let g:airline_theme='onedark'
 " let g:airline_theme='onehalfdark'
-let g:airline_theme='onehalflight'
+" let g:airline_theme='onehalflight'
 let g:airline#extensions#tmuxline#enabled = 1
 
 let g:airline#extensions#tabline#enabled = 1
