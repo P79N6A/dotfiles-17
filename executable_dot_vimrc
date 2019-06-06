@@ -405,6 +405,7 @@ let g:tmuxline_preset = {
             \'cwin' : ['#I', '#W', '#F'],
             \'y'    : ['%R', '#(date +"%d-%m-%y")'],
             \'z'    : '#H'}
+let g:tmuxline_theme = 'airline'
 
 "Rainbow Parentheses
 let g:rainbow_active = 1
@@ -425,8 +426,9 @@ map <Leader>k <Plug>(easymotion-k)
 " Airline / Tmuxline
 let g:airline_section_c = ''
 " let g:airline_theme='onedark'
-let g:airline_theme='onehalfdark'
-let g:airline#extensions#tmuxline#enabled = 0
+" let g:airline_theme='onehalfdark'
+let g:airline_theme='onehalflight'
+let g:airline#extensions#tmuxline#enabled = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_count = 0
