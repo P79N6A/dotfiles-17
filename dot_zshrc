@@ -12,6 +12,9 @@ plugins=(\
 	)
 autoload -U compinit && compinit
 
+# AUTOSUGGEST KEYBINDINGS
+bindkey '^ ' autosuggest-accept
+
 # TMUX PLUGIN SETTING
 export ZSH_TMUX_AUTOSTART=false
 export ZSH_TMUX_AUTOCONNECT=true
@@ -33,9 +36,10 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # PATH ADDITIONS
-export PATH=$PATH:/opt/local/bin
+export PATH=/opt/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=~/.poetry/bin:$PATH
-export PATH=$PATH:/usr/local/lib/ruby/gems/2.6.0/bin
+export PATH=/usr/local/lib/ruby/gems/2.6.0/bin:$PATH
 
 # ALIASES / ENV
 source ~/.alias
