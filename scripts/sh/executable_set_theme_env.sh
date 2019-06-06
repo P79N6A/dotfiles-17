@@ -1,10 +1,16 @@
 #!/bin/bash
 
 now=$(date +"%H")
+lwd=$pwd
 
+cd ~/.config/kitty/
 if (( $now >= 19 )); then
-	export WHICHTHEME=onehalfdark
+	echo 'Setting dark theme...'
+	cat onehalfdark.conf > current_theme.conf
 elif (( $now >= 8 )); then
-	export WHICHTHEME=onehalflight
-else export WHICHTHEME=onehalfdark
+	echo 'Setting light theme...'
+	cat onehalflight.conf > current_theme.conf
+else cat onehalfdark.conf > current_theme.conf
 fi
+
+cd $pwd
