@@ -1,0 +1,74 @@
+1559880012667	Sync.LogManager	DEBUG	Flushing file log
+1559880012732	Sync.LogManager	DEBUG	Log cleanup threshold time: 1559016012732
+1559880012881	Sync.LogManager	DEBUG	Done deleting files.
+1559881936766	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559881937695	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559881939115	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559883825103	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559883825248	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559883825248	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559883825849	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559883826116	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559883826116	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559883826117	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559883826703	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559883827054	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559883827054	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559883827056	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559883827056	Sync.Service	INFO	Starting sync at 2019-06-07 07:03:47 in browser session DLDB2kz0MYXZ
+1559883827057	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559883827059	Sync.Status	INFO	Resetting Status.
+1559883827059	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559883827064	Sync.BrowserIDManager	INFO	Getting keys
+1559883827064	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559883827064	FirefoxAccounts	DEBUG	enter getAssertion()
+1559883827064	FirefoxAccounts	DEBUG	getKeypairAndCertificate: already have keyPair and certificate
+1559883827064	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559883827069	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559883827069	Sync.BrowserIDManager	DEBUG	Getting a token
+1559883827069	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559883827069	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559883827069	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559883827070	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559883827070	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559883827739	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559883827739	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 0
+1559883827739	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 200
+1559883827739	Services.Common.TokenServerClient	DEBUG	Got token response: 200
+1559883827739	Services.Common.RESTResponse	TRACE	Processing response headers.
+1559883827739	Services.Common.TokenServerClient	DEBUG	Successful token response
+1559883827740	Sync.Status	DEBUG	Status.login: success.login => success.login
+1559883827740	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559883827741	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1559883827741	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559883827742	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559883827742	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559883827743	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1559883827743	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559883827743	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559883827743	Services.Common.RESTRequest	TRACE	HTTP Header if-none-match: "1d3cb6698a7af7b246a9837b970c1e724afce599-gzip"
+1559883828132	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559883875352	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://profile.accounts.firefox.com/v1/profile
+1559883875352	Services.Common.RESTRequest	TRACE	Channel for GET https://profile.accounts.firefox.com/v1/profile returned status code 2152398862
+1559883875352	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile failed: 2152398862 - NS_ERROR_NET_TIMEOUT
+1559883875352	Services.Common.RESTRequest	TRACE	GET body: 
+1559883875352	FirefoxAccounts	ERROR	Background refresh of profile failed: {"name":"FxAccountsProfileClientError","code":null,"errno":998,"error":"NETWORK_ERROR","message":"[Exception... \"NS_ERROR_NET_TIMEOUT\"  nsresult: \"0x804b000e (NS_ERROR_NET_TIMEOUT)\"  location: \"JS frame :: resource://services-common/rest.js :: onStopRequest :: line 434\"  data: no]"}
+1559885734129	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559885734254	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559885734255	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559885734258	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559885734258	Sync.Service	INFO	Starting sync at 2019-06-07 07:35:34 in browser session DLDB2kz0MYXZ
+1559885734259	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559885734259	Sync.Service	INFO	Cannot start sync: already syncing?
+1559885734282	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1559885734282	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1559885734282	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1559885734283	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1559885734283	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559885734289	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available

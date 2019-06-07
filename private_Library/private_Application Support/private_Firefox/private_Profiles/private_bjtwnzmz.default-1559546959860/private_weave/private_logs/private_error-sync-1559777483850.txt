@@ -1,0 +1,48 @@
+1559775606932	Sync.LogManager	DEBUG	Flushing file log
+1559775610380	Sync.LogManager	DEBUG	Log cleanup threshold time: 1558911610379
+1559775612821	Sync.LogManager	DEBUG	Done deleting files.
+1559777483185	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559777483298	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559777483298	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559777483298	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559777483298	Sync.Service	INFO	Starting sync at 2019-06-06 01:31:23 in browser session DLDB2kz0MYXZ
+1559777483298	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559777483300	Sync.Status	INFO	Resetting Status.
+1559777483300	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559777483302	Sync.BrowserIDManager	INFO	Getting keys
+1559777483302	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559777483302	FirefoxAccounts	DEBUG	enter getAssertion()
+1559777483302	FirefoxAccounts	DEBUG	getKeypairAndCertificate: already have keyPair and certificate
+1559777483302	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559777483304	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559777483304	Sync.BrowserIDManager	DEBUG	Getting a token
+1559777483304	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559777483305	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559777483305	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559777483305	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559777483305	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559777483757	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559777483823	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559777483823	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 2152398878
+1559777483823	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1559777483823	Services.Common.RESTRequest	TRACE	GET body: 
+1559777483823	Sync.BrowserIDManager	ERROR	Non-authentication error in _fetchTokenForUser: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559777483823	Sync.Status	DEBUG	Status.login: success.login => error.login.reason.network
+1559777483823	Sync.Status	DEBUG	Status.service: success.status_ok => error.login.failed
+1559777483823	Sync.BrowserIDManager	ERROR	Failed to fetch a token for authentication: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559777483830	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1559777483842	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559777483843	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559777483843	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559777483843	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1559777483844	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559777483844	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559777483844	Services.Common.RESTRequest	TRACE	HTTP Header if-none-match: "1d3cb6698a7af7b246a9837b970c1e724afce599-gzip"
+1559777483845	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1559777483845	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1559777483845	Sync.Status	DEBUG	Status.service: error.login.failed => error.sync.failed
+1559777483845	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1559777483846	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559777483850	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available

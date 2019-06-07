@@ -1,0 +1,143 @@
+1559640187876	Sync.LogManager	DEBUG	Flushing file log
+1559640187876	Sync.Engine.Extension-Storage	ERROR	Syncing default-bookmark-folder@gustiaux.com: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-LUKjc1bl2HftV-D6yae5cA0Xj06lUbtbZGAJeLi7OpA/records?_sort=-last_modified&_since=1559055209674 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187876	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-LUKjc1bl2HftV-D6yae5cA0Xj06lUbtbZGAJeLi7OpA/records?_sort=-last_modified&_since=1559055209674 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187876	Sync.Engine.Extension-Storage	ERROR	Syncing https-everywhere@eff.org: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-gLIFexRaxpblSsVAtOw0x7vuQMz_THe_Vp5Eo3HzeBo/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187876	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-gLIFexRaxpblSsVAtOw0x7vuQMz_THe_Vp5Eo3HzeBo/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	ERROR	Syncing {c2c003ee-bd69-42a2-b0e9-6f34222cb046}: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-0jgGhrGSEclM4qd3o3u7jEkyb8icvYnSrCNUDVQorRw/records?_sort=-last_modified&_since=1559069997885 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-0jgGhrGSEclM4qd3o3u7jEkyb8icvYnSrCNUDVQorRw/records?_sort=-last_modified&_since=1559069997885 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	ERROR	Syncing {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-E0SKm_U-jiybuvaXJcTHq3UVMraoXMm0hlKdujc1ZJg/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-E0SKm_U-jiybuvaXJcTHq3UVMraoXMm0hlKdujc1ZJg/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	ERROR	Syncing @contain-google: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-OjpiGexdA6ZBe6nmpLf5sUx29jpxfDqHbP_FCfJUrDU/records?_sort=-last_modified&_since=1557677640827 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-OjpiGexdA6ZBe6nmpLf5sUx29jpxfDqHbP_FCfJUrDU/records?_sort=-last_modified&_since=1557677640827 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	ERROR	Syncing addon@darkreader.org: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-7B8aDgy-qNLj_ohbOVTkb_GI4MRL_h8Rx1Z_oJLbMS0/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187877	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-7B8aDgy-qNLj_ohbOVTkb_GI4MRL_h8Rx1Z_oJLbMS0/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	ERROR	Syncing private-bookmarks@rharel: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-Ae-KFiJQ9w2PiR6mCPPoYW46QSinImZtbQAQXeeyH78/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-Ae-KFiJQ9w2PiR6mCPPoYW46QSinImZtbQAQXeeyH78/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	ERROR	Syncing treestyletab@piro.sakura.ne.jp: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-Y4gwTUvXFI6j0mp19-Zhs03rOhB26fqPhPzfgyjOKpk/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-Y4gwTUvXFI6j0mp19-Zhs03rOhB26fqPhPzfgyjOKpk/records?_sort=-last_modified with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	ERROR	Syncing amptra@keepa.com: request failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-G_skeSRmh4Ee5uqhDafU2goX18AJuImPwBvWttIZELA/records?_sort=-last_modified&_since=1559547150014 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187878	Sync.Engine.Extension-Storage	WARN	Syncing failed: Error: Timeout while trying to access https://webextensions.settings.services.mozilla.com/v1/buckets/default/collections/ext-G_skeSRmh4Ee5uqhDafU2goX18AJuImPwBvWttIZELA/records?_sort=-last_modified&_since=1559547150014 with {"headers":{"Accept":"application/json","Content-Type":"application/json","Authorization":"Bearer 87e63560bf59d9eb73266acccf69601c041b8b950351db5ea919b7f84e8aa0ca"},"mode":"cors"}(resource://services-common/kinto-http-client.js:2565:5) JS Stack trace: NetworkTimeoutError@kinto-http-client.js:2565:5
+[13]</timedFetch/</_timeoutId<@kinto-http-client.js:2750:18
+notify@Timer.jsm:43:17
+1559640187899	Sync.LogManager	DEBUG	Log cleanup threshold time: 1558776187899
+1559640187953	Sync.LogManager	DEBUG	Done deleting files.
+1559640188031	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642150121	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642150275	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559642150275	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559642150278	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559642150278	Sync.Service	INFO	Starting sync at 2019-06-04 11:55:50 in browser session DLDB2kz0MYXZ
+1559642150278	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559642150280	Sync.Status	INFO	Resetting Status.
+1559642150280	Sync.Status	DEBUG	Status.service: error.sync.failed_partial => success.status_ok
+1559642150280	Sync.BrowserIDManager	INFO	Getting keys
+1559642150281	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559642150281	FirefoxAccounts	DEBUG	enter getAssertion()
+1559642150282	FirefoxAccounts	DEBUG	getKeypairAndCertificate: already have keyPair and certificate
+1559642150282	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559642150283	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559642150283	Sync.BrowserIDManager	DEBUG	Getting a token
+1559642150284	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559642150284	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559642150284	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559642150284	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559642150284	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559642150799	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642150814	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559642150815	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 2152398878
+1559642150815	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1559642150815	Services.Common.RESTRequest	TRACE	GET body: 
+1559642150815	Sync.BrowserIDManager	ERROR	Non-authentication error in _fetchTokenForUser: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559642150815	Sync.Status	DEBUG	Status.login: success.login => error.login.reason.network
+1559642150815	Sync.Status	DEBUG	Status.service: success.status_ok => error.login.failed
+1559642150816	Sync.BrowserIDManager	ERROR	Failed to fetch a token for authentication: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559642150819	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1559642150819	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559642150820	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559642150820	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559642150820	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1559642150820	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559642150820	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559642150820	Services.Common.RESTRequest	TRACE	HTTP Header if-none-match: "1d3cb6698a7af7b246a9837b970c1e724afce599-gzip"
+1559642150828	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://profile.accounts.firefox.com/v1/profile
+1559642150828	Services.Common.RESTRequest	TRACE	Channel for GET https://profile.accounts.firefox.com/v1/profile returned status code 2152398878
+1559642150828	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1559642150828	Services.Common.RESTRequest	TRACE	GET body: 
+1559642150829	FirefoxAccounts	ERROR	Background refresh of profile failed: {"name":"FxAccountsProfileClientError","code":null,"errno":998,"error":"NETWORK_ERROR","message":"[Exception... \"NS_ERROR_UNKNOWN_HOST\"  nsresult: \"0x804b001e (NS_ERROR_UNKNOWN_HOST)\"  location: \"JS frame :: resource://services-common/rest.js :: onStopRequest :: line 434\"  data: no]"}
+1559642151297	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559642151297	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559642151298	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559642151687	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642152020	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642152439	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559642152439	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559642152440	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559642152440	Sync.Service	INFO	Starting sync at 2019-06-04 11:55:52 in browser session DLDB2kz0MYXZ
+1559642152441	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559642152441	Sync.Service	INFO	Cannot start sync: already syncing?
+1559642158901	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1559642158901	Sync.SyncScheduler	DEBUG	Online, will sync in 2s.
+1559642158901	Sync.SyncScheduler	DEBUG	Next sync in 2000 ms. (why=wake_notification)
+1559642158902	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559642163393	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559642163393	FirefoxAccounts	INFO	Polling device commands.
+1559642163393	Sync.Service	INFO	Starting sync at 2019-06-04 11:56:03 in browser session DLDB2kz0MYXZ
+1559642163393	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559642163393	Sync.Service	INFO	Cannot start sync: already syncing?
+1559642163396	Services.Common.RESTRequest	TRACE	local time, offset: 1559642163396, 50
+1559642163396	Services.Common.RESTRequest	DEBUG	GET request to https://api.accounts.firefox.com/v1/account/device/commands?index=0
+1559642163396	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559642163397	Services.Common.RESTRequest	TRACE	HTTP Header content-type: text/plain
+1559642163397	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: de,en-us,en
+1559642163947	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559642163947	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559642163948	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559642163952	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available

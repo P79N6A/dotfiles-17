@@ -1,0 +1,31 @@
+1559572385107	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1559572544562	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559572545063	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559572545064	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559572545065	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1559572549221	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559572549586	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559572549586	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559572549588	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559572549588	Sync.Service	INFO	Starting sync at 2019-06-03 16:35:49 in browser session zy_r6QaCjlKi
+1559572549588	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559572549592	Sync.Status	INFO	Resetting Status.
+1559572549592	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559573589603	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1559573589603	Sync.SyncScheduler	DEBUG	Online, will sync in 2s.
+1559573589603	Sync.SyncScheduler	DEBUG	Next sync in 2000 ms. (why=wake_notification)
+1559573589604	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559573592343	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559573592343	Sync.Service	INFO	Starting sync at 2019-06-03 16:53:12 in browser session zy_r6QaCjlKi
+1559573592344	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559573592347	Sync.Service	INFO	Cannot start sync: already syncing?
+1559573595329	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559573595330	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559573595331	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1559573595336	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available

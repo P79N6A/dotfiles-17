@@ -1,0 +1,46 @@
+1559592152715	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559594032125	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559594032267	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559594032267	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559594032268	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559594032268	Sync.Service	INFO	Starting sync at 2019-06-03 22:33:52 in browser session DLDB2kz0MYXZ
+1559594032268	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559594032270	Sync.Status	INFO	Resetting Status.
+1559594032270	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559594032270	Sync.BrowserIDManager	INFO	Getting keys
+1559594032270	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559594032270	FirefoxAccounts	DEBUG	enter getAssertion()
+1559594032271	FirefoxAccounts	DEBUG	getKeypairAndCertificate: already have keyPair and certificate
+1559594032271	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559594032276	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559594032276	Sync.BrowserIDManager	DEBUG	Getting a token
+1559594032276	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559594032276	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559594032276	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559594032276	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559594032276	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559594032763	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559594032810	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559594032810	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 2152398878
+1559594032810	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1559594032810	Services.Common.RESTRequest	TRACE	GET body: 
+1559594032810	Sync.BrowserIDManager	ERROR	Non-authentication error in _fetchTokenForUser: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559594032811	Sync.Status	DEBUG	Status.login: success.login => error.login.reason.network
+1559594032811	Sync.Status	DEBUG	Status.service: success.status_ok => error.login.failed
+1559594032811	Sync.BrowserIDManager	ERROR	Failed to fetch a token for authentication: TokenServerClientNetworkError({"error":{}})(resource://services-common/tokenserverclient.js:35:36) JS Stack trace: TokenServerClientNetworkError@tokenserverclient.js:58:16
+getTokenFromBrowserIDAssertion@tokenserverclient.js:244:13
+1559594032813	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1559594032813	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559594032815	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559594032815	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559594032815	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1559594032815	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559594032815	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559594032815	Services.Common.RESTRequest	TRACE	HTTP Header if-none-match: "1d3cb6698a7af7b246a9837b970c1e724afce599-gzip"
+1559594032819	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1559594032819	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1559594032819	Sync.Status	DEBUG	Status.service: error.login.failed => error.sync.failed
+1559594032820	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available
+1559594032821	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559594032826	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection was refused"  nsresult: "0x804b000d (NS_ERROR_CONNECTION_REFUSED)"  location: "<unknown>"  data: no] No traceback available

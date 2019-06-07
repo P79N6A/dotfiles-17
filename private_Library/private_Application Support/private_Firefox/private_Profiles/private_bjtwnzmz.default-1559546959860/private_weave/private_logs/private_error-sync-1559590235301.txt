@@ -1,0 +1,67 @@
+1559586391096	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559588289763	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559588290694	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559588290698	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559588293539	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590221089	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590221249	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559590221249	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559590221768	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590222211	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559590222211	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559590222212	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559590222761	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590223211	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559590223211	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559590223216	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559590223216	Sync.Service	INFO	Starting sync at 2019-06-03 21:30:23 in browser session DLDB2kz0MYXZ
+1559590223217	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559590223218	Sync.Status	INFO	Resetting Status.
+1559590223218	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559590223224	Sync.BrowserIDManager	INFO	Getting keys
+1559590223224	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559590223224	FirefoxAccounts	DEBUG	enter getAssertion()
+1559590223225	FirefoxAccounts	DEBUG	getKeypairAndCertificate: already have keyPair and certificate
+1559590223225	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559590223228	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559590223228	Sync.BrowserIDManager	DEBUG	Getting a token
+1559590223229	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559590223230	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559590223230	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559590223230	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559590223230	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559590223888	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559590223889	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 0
+1559590223889	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 200
+1559590223889	Services.Common.TokenServerClient	DEBUG	Got token response: 200
+1559590223889	Services.Common.RESTResponse	TRACE	Processing response headers.
+1559590223889	Services.Common.TokenServerClient	DEBUG	Successful token response
+1559590223889	Sync.Status	DEBUG	Status.login: success.login => success.login
+1559590223889	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559590223899	FirefoxAccounts	DEBUG	FxAccountsProfileClient: Requested profile
+1559590223899	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559590223935	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559590223935	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559590223936	Services.Common.RESTRequest	DEBUG	GET request to https://profile.accounts.firefox.com/v1/profile
+1559590223936	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559590223936	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559590223936	Services.Common.RESTRequest	TRACE	HTTP Header if-none-match: "1d3cb6698a7af7b246a9837b970c1e724afce599-gzip"
+1559590224280	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590230250	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1559590230250	Sync.SyncScheduler	DEBUG	Online, will sync in 2s.
+1559590230250	Sync.SyncScheduler	DEBUG	Next sync in 2000 ms. (why=wake_notification)
+1559590230251	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559590232881	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559590232881	Sync.Service	INFO	Starting sync at 2019-06-03 21:30:32 in browser session DLDB2kz0MYXZ
+1559590232881	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559590232882	Sync.Service	INFO	Cannot start sync: already syncing?
+1559590235296	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559590235297	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559590235298	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559590235300	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available

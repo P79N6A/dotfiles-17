@@ -1,0 +1,66 @@
+1559620776894	Sync.LogManager	DEBUG	Flushing file log
+1559620776957	Sync.LogManager	DEBUG	Log cleanup threshold time: 1558756776957
+1559620776995	Sync.LogManager	DEBUG	Done deleting files.
+1559622691091	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559622691250	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559622691250	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559622691251	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559622691251	Sync.Service	INFO	Starting sync at 2019-06-04 06:31:31 in browser session DLDB2kz0MYXZ
+1559622691251	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559622691253	Sync.Status	INFO	Resetting Status.
+1559622691253	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559622691750	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559622692201	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559622692201	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559622692201	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559622692700	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559622693114	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559622693328	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559622693328	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559622693331	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559622693331	Sync.Service	INFO	Starting sync at 2019-06-04 06:31:33 in browser session DLDB2kz0MYXZ
+1559622693331	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559622693331	Sync.Service	INFO	Cannot start sync: already syncing?
+1559624611112	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559624611264	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559624611264	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559624611264	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559624611264	Sync.Service	INFO	Starting sync at 2019-06-04 07:03:31 in browser session DLDB2kz0MYXZ
+1559624611264	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559624611264	Sync.Service	INFO	Cannot start sync: already syncing?
+1559624611824	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559624612095	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559624612096	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559624612097	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559624612628	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559624612695	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559624613035	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559624613035	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559624613037	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559624613037	Sync.Service	INFO	Starting sync at 2019-06-04 07:03:33 in browser session DLDB2kz0MYXZ
+1559624613043	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559624613043	Sync.Service	INFO	Cannot start sync: already syncing?
+1559624618055	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1559624618055	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1559624618055	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1559624618057	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1559624618057	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559624618062	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available

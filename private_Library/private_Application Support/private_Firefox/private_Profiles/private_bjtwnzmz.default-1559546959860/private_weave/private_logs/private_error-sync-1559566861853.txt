@@ -1,0 +1,51 @@
+1559566146750	Sync.LogManager	DEBUG	Flushing file log
+1559566146752	Sync.Engine.Extension-Storage	ERROR	Syncing {c2c003ee-bd69-42a2-b0e9-6f34222cb046}: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146753	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146753	Sync.Engine.Extension-Storage	ERROR	Syncing {d7742d87-e61d-4b78-b8a1-b469842139fa}: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146753	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	ERROR	Syncing @contain-google: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	ERROR	Syncing {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	ERROR	Syncing addon@darkreader.org: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146754	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146755	Sync.Engine.Extension-Storage	ERROR	Syncing default-bookmark-folder@gustiaux.com: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146755	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146755	Sync.Engine.Extension-Storage	ERROR	Syncing amptra@keepa.com: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146755	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146756	Sync.Engine.Extension-Storage	ERROR	Syncing private-bookmarks@rharel: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146756	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146756	Sync.Engine.Extension-Storage	ERROR	Syncing https-everywhere@eff.org: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146756	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1559566146765	Sync.LogManager	DEBUG	Log cleanup threshold time: 1558702146765
+1559566146770	Sync.LogManager	DEBUG	Done deleting files.
+1559566306590	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559566307135	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559566307136	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559566307137	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1559566307898	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559566308222	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559566308222	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559566308225	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559566308225	Sync.Service	INFO	Starting sync at 2019-06-03 14:51:48 in browser session zy_r6QaCjlKi
+1559566308227	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559566309004	Sync.Status	INFO	Resetting Status.
+1559566309005	Sync.Status	DEBUG	Status.service: error.sync.failed_partial => success.status_ok
+1559566855771	Sync.SyncScheduler	DEBUG	Woke from sleep.
+1559566855771	Sync.SyncScheduler	DEBUG	Online, will sync in 2s.
+1559566855771	Sync.SyncScheduler	DEBUG	Next sync in 2000 ms. (why=wake_notification)
+1559566855772	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559566858877	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559566858877	Sync.Service	INFO	Starting sync at 2019-06-03 15:00:58 in browser session zy_r6QaCjlKi
+1559566858878	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559566858878	Sync.Service	INFO	Cannot start sync: already syncing?
+1559566861836	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559566861838	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available
+1559566861842	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1559566861852	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Abort"  nsresult: "0x80004004 (NS_ERROR_ABORT)"  location: "<unknown>"  data: no] No traceback available

@@ -1,0 +1,1224 @@
+1559693633839	Sync.LogManager	DEBUG	Flushing file log
+1559693633840	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://profile.accounts.firefox.com/v1/profile
+1559693633840	Services.Common.RESTRequest	TRACE	Channel for GET https://profile.accounts.firefox.com/v1/profile returned status code 2152398878
+1559693633840	Services.Common.RESTRequest	DEBUG	GET https://profile.accounts.firefox.com/v1/profile failed: 2152398878 - NS_ERROR_UNKNOWN_HOST
+1559693633840	Services.Common.RESTRequest	TRACE	GET body: 
+1559693633840	FirefoxAccounts	ERROR	Background refresh of profile failed: {"name":"FxAccountsProfileClientError","code":null,"errno":998,"error":"NETWORK_ERROR","message":"[Exception... \"NS_ERROR_UNKNOWN_HOST\"  nsresult: \"0x804b001e (NS_ERROR_UNKNOWN_HOST)\"  location: \"JS frame :: resource://services-common/rest.js :: onStopRequest :: line 434\"  data: no]"}
+1559693633849	Sync.LogManager	DEBUG	Log cleanup threshold time: 1558829633849
+1559693633909	Sync.LogManager	DEBUG	Done deleting files.
+1559693634190	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559693634191	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559693634193	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559693634698	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559693635212	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559693635212	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559693635215	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559693635215	Sync.Service	INFO	Starting sync at 2019-06-05 02:13:55 in browser session DLDB2kz0MYXZ
+1559693635215	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559693635227	Sync.Status	INFO	Resetting Status.
+1559693635227	Sync.Status	DEBUG	Status.service: error.sync.failed => success.status_ok
+1559693635232	Sync.BrowserIDManager	INFO	Getting keys
+1559693635232	Sync.BrowserIDManager	INFO	Getting an assertion from: https://token.services.mozilla.com/1.0/sync/1.5
+1559693635232	FirefoxAccounts	DEBUG	enter getAssertion()
+1559693635232	FirefoxAccounts	DEBUG	getCertificateSigned: true true
+1559693635236	Services.Common.RESTRequest	TRACE	local time, offset: 1559693635236, 2704
+1559693635244	Services.Common.RESTRequest	DEBUG	POST request to https://api.accounts.firefox.com/v1/certificate/sign
+1559693635244	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559693635244	Services.Common.RESTRequest	TRACE	HTTP Header content-type: application/json
+1559693635244	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: de,en-us,en
+1559693635244	Services.Common.RESTRequest	DEBUG	POST Length: 888
+1559693635244	Services.Common.RESTRequest	TRACE	POST Body: {"publicKey":{"algorithm":"DS","y":"97CCB5D15873E4314736CEE2FA7A8D1099F91BB4958CE1B00C95A21684A0E99304028A4A799F22FB77054EF4D5FDC5609FDD5E896C90B7616D0D90DE4CCF11092DF98DD79753C3B6B84788BAE14F4FFD2061A66A93FDF79977157517FA6004D85DF599930BD1485F6035D148CA2D2A353BDFA6E44E48761B603604E66715852E","p":"FF600483DB6ABFC5B45EAB78594B3533D550D9F1BF2A992A7A8DAA6DC34F8045AD4E6E0C429D334EEEAAEFD7E23D4810BE00E4CC1492CBA325BA81FF2D5A5B305A8D17EB3BF4A06A349D392E00D329744A5179380344E82A18C47933438F891E22AEEF812D69C8F75E326CB70EA000C3F776DFDBD604638C2EF717FC26D02E17","q":"E21E04F911D1ED7991008ECAAB3BF775984309C3","g":"C52A4A0FF3B7E61FDF1867CE84138369A6154F4AFA92966E3C827E25CFA6CF508B90E5DE419E1337E07A2E9E2A3CD5DEA704D175F8EBF6AF397D69E110B96AFB17C7A03259329E4829B0D03BBC7896B15B4ADE53E130858CC34D96269AA89041F409136C7242A38895C9D5BCCAD4F389AF1D7A4BD1398BD072DFFA896233397A"},"duration":21600000}
+1559693635928	Services.Common.RESTRequest	TRACE	onStartRequest: POST https://api.accounts.firefox.com/v1/certificate/sign
+1559693635931	Services.Common.RESTRequest	TRACE	Channel for POST https://api.accounts.firefox.com/v1/certificate/sign returned status code 0
+1559693635931	Services.Common.RESTRequest	DEBUG	POST https://api.accounts.firefox.com/v1/certificate/sign 200
+1559693635931	Hawk	DEBUG	(Response) /certificate/sign: code: 200 - Status text: OK
+1559693635931	Services.Common.RESTResponse	TRACE	Processing response headers.
+1559693635931	Hawk	DEBUG	Clock offset vs https://api.accounts.firefox.com/v1: 3069
+1559693635931	FirefoxAccounts	DEBUG	getCertificate got a new one: true
+1559693635931	FirefoxAccounts	DEBUG	_updateAccountData with items: ["keyPair","cert"]
+1559693635931	FirefoxAccounts	DEBUG	writing plain storage: ["email","sessionToken","uid","verified","device","oauthTokens","profileCache"]
+1559693635931	FirefoxAccounts	TRACE	starting write of json user data: ["email","sessionToken","uid","verified","device","oauthTokens","profileCache"]
+1559693635932	FirefoxAccounts	DEBUG	getAssertionFromCert
+1559693635937	FirefoxAccounts	DEBUG	getAssertionFromCert returning signed: true
+1559693635937	Sync.BrowserIDManager	DEBUG	Getting a token
+1559693635937	Services.Common.TokenServerClient	DEBUG	Beginning BID assertion exchange: https://token.services.mozilla.com/1.0/sync/1.5
+1559693635937	Services.Common.RESTRequest	DEBUG	GET request to https://token.services.mozilla.com/1.0/sync/1.5
+1559693635937	Services.Common.RESTRequest	TRACE	HTTP Header accept: application/json
+1559693635937	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559693635937	Services.Common.RESTRequest	TRACE	HTTP Header x-client-state: ***** (suppressed)
+1559693635945	FirefoxAccounts	TRACE	finished write of json user data - took: 14
+1559693635945	FirefoxAccounts	DEBUG	writing secure storage: ["kSync","kXCS","kExtSync","kExtKbHash"]
+1559693635945	FirefoxAccounts	TRACE	starting write of user data to the login manager
+1559693636328	FirefoxAccounts	TRACE	finished write of user data to the login manager
+1559693636329	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559693636740	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://token.services.mozilla.com/1.0/sync/1.5
+1559693636741	Services.Common.RESTRequest	TRACE	Channel for GET https://token.services.mozilla.com/1.0/sync/1.5 returned status code 0
+1559693636741	Services.Common.RESTRequest	DEBUG	GET https://token.services.mozilla.com/1.0/sync/1.5 200
+1559693636741	Services.Common.TokenServerClient	DEBUG	Got token response: 200
+1559693636741	Services.Common.RESTResponse	TRACE	Processing response headers.
+1559693636741	Services.Common.TokenServerClient	DEBUG	Successful token response
+1559693636741	Sync.Status	DEBUG	Status.login: success.login => success.login
+1559693636741	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559693636741	FirefoxAccounts	TRACE	not checking freshness of profile as it remains recent
+1559693638191	Sync.Resource	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections
+1559693638191	Sync.Service	DEBUG	Fetching server configuration: https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/configuration
+1559693638371	Sync.Resource	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/configuration
+1559693638371	Sync.Service	DEBUG	Fetching global metadata record
+1559693638371	Sync.Service	DEBUG	Weave Version: 1.69.0 Local Storage: 5 Remote Storage: 5
+1559693638371	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1559693638371	Sync.Service	INFO	Testing info/collections: {"addons":1559591993.55,"tabs":1559653284.95,"clients":1559630744.67,"crypto":1499425014.97,"forms":1559647795.22,"meta":1558615339.37,"bookmarks":1559635031.9,"prefs":1559592022.3,"history":1559653286.66}
+1559693638371	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1499425014.97
+1559693638371	Sync.Synchronizer	DEBUG	Refreshing client list.
+1559693638372	Sync.Engine.Clients	INFO	0 outgoing items pre-reconciliation
+1559693638372	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1559693638556	Sync.Collection	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/storage/clients?full=1&limit=1000
+1559693638564	Sync.Engine.Clients	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 5 reconciled.
+1559693638565	Services.Common.RESTRequest	TRACE	local time, offset: 1559693638565, 3069
+1559693638566	Services.Common.RESTRequest	DEBUG	GET request to https://api.accounts.firefox.com/v1/account/devices
+1559693638566	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1559693638566	Services.Common.RESTRequest	TRACE	HTTP Header content-type: text/plain
+1559693638566	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: de,en-us,en
+1559693638751	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://api.accounts.firefox.com/v1/account/devices
+1559693638754	Services.Common.RESTRequest	TRACE	Channel for GET https://api.accounts.firefox.com/v1/account/devices returned status code 0
+1559693638754	Services.Common.RESTRequest	DEBUG	GET https://api.accounts.firefox.com/v1/account/devices 200
+1559693638754	Hawk	DEBUG	(Response) /account/devices: code: 200 - Status text: OK
+1559693638754	Services.Common.RESTResponse	TRACE	Processing response headers.
+1559693638754	Hawk	DEBUG	Clock offset vs https://api.accounts.firefox.com/v1: 3246
+1559693638754	Sync.Engine.Clients	DEBUG	Refreshing the known stale clients list
+1559693638755	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for undefined
+1559693638757	Sync.Engine.Clients	INFO	Hiding stale client zrHtY8X-7Ppb - duplicate device id 0d532d67df49fccb2b82b25b9370493f
+1559693638759	Sync.Synchronizer	INFO	Updating enabled engines: 4 clients.
+1559693638760	Sync.Synchronizer	INFO	Syncing all enabled engines.
+1559693638760	Sync.Engine.Prefs	INFO	0 outgoing items pre-reconciliation
+1559693638760	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693638761	Sync.Engine.Tabs	INFO	0 outgoing items pre-reconciliation
+1559693638762	Sync.Engine.Tabs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693638764	Sync.Engine.Bookmarks	DEBUG	Checking if server sync ID Yl5kaaf6qgNt matches existing
+1559693638767	Sync.Engine.Bookmarks	INFO	0 outgoing items pre-reconciliation
+1559693638769	Sync.Engine.Bookmarks	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693638771	Sync.Engine.Bookmarks.BookmarkSyncUtils	DEBUG	pushChanges: Processed change records: {"weak":0,"skipped":0,"updated":0}
+1559693638772	Sync.Engine.Addons	DEBUG	Refreshing reconciler state
+1559693638772	Sync.AddonsReconciler	INFO	Refreshing global state from AddonManager.
+1559693638775	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Form Autofill (version=1.0, id=formautofill@mozilla.org)
+1559693638775	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Monitor (version=3.0, id=fxmonitor@mozilla.org)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Screenshots (version=37.1.0, id=screenshots@mozilla.org)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon WebCompat Reporter (version=1.1.0, id=webcompat-reporter@mozilla.org)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web Compat (version=4.0.0, id=webcompat@mozilla.org)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Norton Password Manager (version=6.4.1.12, id=idsafe@norton.com)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Norton Safe Web (version=3.8.0.6, id=nortonsafeweb@symantec.com)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Stylish - Custom themes for any website (version=3.1.8, id={46551EC9-40F0-4e47-8E18-8E5CF550CFB8})
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon uBlock Origin (version=1.19.6, id=uBlock0@raymondhill.net)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Keepa - Amazon Price Tracker (version=3.31, id=amptra@keepa.com)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon TST Colored Tabs (version=0.6, id=tst-colored-tabs@murz)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Momentum (version=1.7.3, id=momentum@momentumdash.com)
+1559693638776	Sync.AddonsReconciler	DEBUG	Rectifying state for addon CaretTab - New Tab Clock and Date (version=2.3.1, id={1ab49626-2e16-405b-ad65-dcaab8decd7b})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Auto Tab Discard (version=0.3.2, id={c2c003ee-bd69-42a2-b0e9-6f34222cb046})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Tree Style Tab (version=3.0.15, id=treestyletab@piro.sakura.ne.jp)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Tab flip for Tree Style Tab (version=1.2.0.1, id={724545b6-7e17-4fa2-96e0-71eddf3c3319})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Default Bookmark Folder (version=2.10.0, id=default-bookmark-folder@gustiaux.com)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Privacy Badger (version=2019.2.19, id=jid1-MnnxcxisBPnSXQ@jetpack)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Private Bookmarks (version=0.1.17.1a, id=private-bookmarks@rharel)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web to Plex (version=3.4, id={05243336-ce19-46df-95af-680070c96134})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon 1Password X – Password Manager (version=1.15.2, id={d634138d-c276-4fc8-924b-40a0ea21d284})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon New Tab Homepage (version=0.6.2, id={66E978CD-981F-47DF-AC42-E3CF417C1467})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Vue.js devtools (version=5.1.0, id={5caff8cc-3d2e-4110-a88a-003cc85b3858})
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Google Container (version=1.4.0, id=@contain-google)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Facebook Container (version=1.9.2, id=@contain-facebook)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Wikiwand: Wikipedia Modernized (version=5.0.2, id=jid1-D7momAzRw417Ag@jetpack)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Dark Reader (version=4.7.12, id=addon@darkreader.org)
+1559693638777	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Make Medium Readable Again (version=1.5.2, id={28d1ed97-5ff6-432b-a26d-61896fe2cbed})
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Reddit Enhancement Suite (version=5.16.9, id=jid1-xUfzOsOFlzSOXg@jetpack)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon HTTPS Everywhere (version=2019.5.13, id=https-everywhere@eff.org)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon In My Pocket (version=0.10.5, id={cd7e22de-2e34-40f0-aeff-cec824cbccac})
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Vimium (version=1.64.6, id={d7742d87-e61d-4b78-b8a1-b469842139fa})
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon 1Password extension (desktop app required) (version=4.7.4.90, id=onepassword4@agilebits.com)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Atom One Dark Theme (version=2.0, id={ae166280-3fad-45c4-ae95-7a9c8f8c4c60})
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Default (version=, id=default-theme@mozilla.org)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Light (version=, id=firefox-compact-light@mozilla.org)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Dark (version=, id=firefox-compact-dark@mozilla.org)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon OpenH264 Video Codec provided by Cisco Systems, Inc. (version=1.8.1, id=gmp-gmpopenh264)
+1559693638778	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Widevine Content Decryption Module provided by Google Inc. (version=4.10.1196.0, id=gmp-widevinecdm)
+1559693638788	Sync.AddonsReconciler	INFO	Saving reconciler state to file: addonsreconciler
+1559693638793	Sync.Engine.Addons	INFO	0 outgoing items pre-reconciliation
+1559693639001	Sync.Collection	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/storage/addons?full=1&sort=newest&ids={70b6811c-7156-ac49-8e4e-23908e21fb7d}&limit=1000
+1559693639871	Sync.AddonUtils	INFO	Found 0 / 1 add-ons during repository search.
+1559693639871	Sync.Engine.Addons.Store	WARN	Failed to apply incoming record {70b6811c-7156-ac49-8e4e-23908e21fb7d}: Error: Add-on not found after install: {d40f5e7b-d2cf-4856-b441-cc613eeffbe3}(resource://services-sync/engines/addons.js:340:13) JS Stack trace: create@addons.js:340:13
+1559693639871	Sync.Engine.Addons	INFO	Records: 1 applied, 0 successfully, 1 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693639873	Sync.Engine.Forms	INFO	0 outgoing items pre-reconciliation
+1559693639873	Sync.Engine.Forms	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693639874	Sync.Engine.History	DEBUG	Checking if server sync ID lHZb_xg5j1yN matches existing
+1559693639875	Sync.Engine.History	INFO	0 outgoing items pre-reconciliation
+1559693639876	Sync.Engine.History	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1559693639877	Sync.Engine.Extension-Storage	DEBUG	Syncing extension settings for ["{d7742d87-e61d-4b78-b8a1-b469842139fa}","default-bookmark-folder@gustiaux.com","https-everywhere@eff.org","{c2c003ee-bd69-42a2-b0e9-6f34222cb046}","{46551EC9-40F0-4e47-8E18-8E5CF550CFB8}","@contain-google","addon@darkreader.org","private-bookmarks@rharel","treestyletab@piro.sakura.ne.jp","amptra@keepa.com"]
+1559693641032	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641032	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641033	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641033	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641034	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641035	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641035	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641035	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641035	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641035	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641035	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641035	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641035	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641053	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641054	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641054	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641058	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641058	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641058	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641062	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641062	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641062	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641066	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641066	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641066	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641070	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641070	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641070	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641076	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641077	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641077	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641082	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641082	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641082	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641086	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641086	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641086	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641090	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641090	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641090	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641093	FirefoxAccounts	DEBUG	getOAuthToken enter
+1559693641093	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1559693641093	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1559693641580	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641580	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641580	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641580	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641580	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641581	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641582	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641583	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641583	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641583	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641583	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641585	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641585	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641586	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641586	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641586	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641586	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641587	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641587	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641587	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641587	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641588	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641588	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641589	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641590	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641590	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641590	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641590	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641590	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641590	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641598	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641598	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641598	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641599	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641600	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641601	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641601	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641601	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641601	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641609	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641609	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641609	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641609	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641609	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641609	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641610	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641611	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641612	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641612	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641612	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641615	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641615	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641615	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641615	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641615	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641615	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641616	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641617	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641618	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641618	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641618	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641618	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641618	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641620	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641620	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641620	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641620	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641620	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641620	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641620	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641621	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641622	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641622	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641622	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641622	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641624	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641624	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641624	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641624	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641625	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641626	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641627	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641627	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641627	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641627	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641627	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641627	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641627	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641629	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641629	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641629	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641629	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641630	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641631	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641632	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641632	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641632	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641632	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641632	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641632	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641632	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641634	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641634	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641634	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641635	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641636	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641636	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641636	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641636	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641639	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641639	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641639	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641640	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641640	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641640	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641640	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641640	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641641	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641641	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641641	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641641	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641641	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641642	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641642	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641642	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641642	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641642	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641642	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641642	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641644	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641644	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641644	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641645	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641646	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641646	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641646	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641646	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641647	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641647	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641647	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641647	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641647	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641647	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641649	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641649	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641649	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641649	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641650	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641651	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641652	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641652	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641652	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641652	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641652	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641652	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641654	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641654	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641654	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641654	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641654	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641654	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641654	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641655	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641656	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641656	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641656	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641656	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641658	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641658	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641659	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641659	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641660	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641661	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641661	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641661	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641662	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641662	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641662	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641662	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641662	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641663	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641663	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641664	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641664	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641665	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641666	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641666	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641666	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641666	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641666	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641666	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641666	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641666	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641669	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641669	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641669	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641669	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641669	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641669	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641669	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641670	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641671	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641671	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641671	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641671	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641673	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641673	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641673	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641673	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641674	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641675	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641676	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641676	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641676	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641676	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641676	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641676	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641677	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641677	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641678	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641678	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641679	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641680	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641680	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641680	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641680	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641680	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641680	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641680	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641680	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641682	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641682	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641682	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641683	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641684	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641684	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641685	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641685	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641687	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641687	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641687	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641687	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641687	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641688	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641689	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641690	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641690	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641690	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641690	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641690	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641692	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641692	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641692	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641693	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641694	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641694	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641694	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641694	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641696	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641697	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641697	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641698	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641699	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641699	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641699	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641699	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641701	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641701	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641701	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641701	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641701	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641702	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641703	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641704	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641704	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641704	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641704	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641704	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641705	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641705	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641706	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641706	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641707	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641708	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641709	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641709	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641709	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641709	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641711	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641711	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641711	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641712	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641713	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641713	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641713	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641713	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641715	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641715	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641715	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641715	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641716	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641717	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641718	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641718	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641718	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641718	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641718	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641718	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641718	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641720	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641720	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641720	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641720	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641720	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641720	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641720	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641721	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641722	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641722	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641722	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641722	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641724	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641724	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641724	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641724	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641724	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641725	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641726	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641727	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641727	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641727	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641727	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641727	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641727	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641729	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641729	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641729	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641729	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641730	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641731	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641732	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641732	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641732	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641732	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641732	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641733	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641733	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641734	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641734	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641735	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641736	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641736	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641736	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641736	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641736	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641736	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641737	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641737	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641738	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641738	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641739	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641740	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641740	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641740	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641740	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641740	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641740	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641740	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641740	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641742	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641742	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641742	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641743	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641744	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641744	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641744	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641744	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641747	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641747	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641747	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641747	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641747	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641747	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641748	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641748	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641748	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641748	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641748	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641749	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641750	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641751	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641751	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641751	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641751	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641752	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641752	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641753	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641753	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641754	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641755	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641755	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641755	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641755	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641755	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641756	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641756	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641756	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641756	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641757	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641757	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641757	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641757	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641757	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641758	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641758	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641758	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641759	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641759	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641760	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641760	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641760	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641760	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641760	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641761	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641761	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641761	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641761	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641761	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641761	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641761	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641761	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641764	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641764	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641764	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641764	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641764	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641764	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641764	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641765	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641765	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641766	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641767	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641767	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641767	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641767	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641768	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641768	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641768	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641768	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641768	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641768	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641768	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641768	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641771	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1559112618628.
+1559693641771	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1559693641771	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1559693641771	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1559693641771	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1559693641771	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1559693641772	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1559693641773	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1559693641774	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1559693641774	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1559693641774	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1559693641774	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1559693641774	Sync.CollectionKeyManager	INFO	Bumping last modified to 1559112618628
+1559693641817	Sync.Doctor	INFO	Skipping check of prefs - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of tabs - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of bookmarks - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of addons - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of forms - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of history - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping check of extension-storage - disabled via preferences
+1559693641817	Sync.Doctor	INFO	Skipping validation: no engines qualify
+1559693641817	Sync.Status	DEBUG	Status.sync: success.sync => success.sync
+1559693641817	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559693641818	Sync.Synchronizer	INFO	Sync completed at 2019-06-05 02:14:01 after 6.59 secs.
+1559693641819	Sync.Declined	DEBUG	Handling remote declined: ["passwords"]
+1559693641819	Sync.Declined	DEBUG	Handling local declined: ["passwords"]
+1559693641819	Sync.Declined	DEBUG	Declined changed? false
+1559693641819	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1559693641820	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)

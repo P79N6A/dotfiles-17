@@ -1,0 +1,62 @@
+1559670678531	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559672600084	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559672600258	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559672600258	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559672600259	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559672600259	Sync.Service	INFO	Starting sync at 2019-06-04 20:23:20 in browser session DLDB2kz0MYXZ
+1559672600259	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559672600262	Sync.Status	INFO	Resetting Status.
+1559672600262	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1559672600765	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559672600991	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559672600992	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559672600992	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559672601701	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559672601833	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559672601833	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559672601838	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559672601838	Sync.Service	INFO	Starting sync at 2019-06-04 20:23:21 in browser session DLDB2kz0MYXZ
+1559672601848	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559672601849	Sync.Service	INFO	Cannot start sync: already syncing?
+1559672603087	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559674512219	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559674512295	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559674512295	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559674512295	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559674512295	Sync.Service	INFO	Starting sync at 2019-06-04 20:55:12 in browser session DLDB2kz0MYXZ
+1559674512296	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559674512296	Sync.Service	INFO	Cannot start sync: already syncing?
+1559674512777	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559674513185	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1559674513185	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1559674513186	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1559674513691	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559674513832	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1559674513832	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1559674513834	Sync.Service	DEBUG	User-Agent: Firefox/67.0 (Intel Mac OS X 10.14) FxSync/1.69.0.20190516215225.desktop
+1559674513836	Sync.Service	INFO	Starting sync at 2019-06-04 20:55:13 in browser session DLDB2kz0MYXZ
+1559674513839	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1559674513840	Sync.Service	INFO	Cannot start sync: already syncing?
+1559674514982	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1559674524629	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no] No traceback available
+1559674524667	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no] No traceback available
+1559674524679	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=reschedule)
+1559674526821	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "<unknown>"  data: no] No traceback available
