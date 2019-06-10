@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>TLDR pages 0.0.3.2</string>
+	<key>CFBundleName</key>
+	<string>TLDR pages</string>
+	<key>DashDocSetFamily</key>
+	<string>dashtoc</string>
+	<key>DashDocSetKeyword</key>
+	<string>tldr</string>
+	<key>DashDocSetPluginKeyword</key>
+	<string>tldr</string>
+	<key>DashWebSearchKeyword</key>
+	<string>tldr</string>
+	<key>DocSetPlatformFamily</key>
+	<string>usercontribtldr</string>
+	<key>dashIndexFilePath</key>
+	<string>index.html</string>
+	<key>isDashDocset</key>
+	<true/>
+</dict>
+</plist>
