@@ -91,11 +91,11 @@ nnoremap          Y               y$
 
 
 " https://jeffkreeftmeijer.com/vim-number/
-augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
+" augroup numbertoggle
+"     autocmd!
+"     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+"     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" augroup END
 
 " leader
 let mapleader=" "
@@ -475,6 +475,33 @@ command! ProjectFiles execute 'Files' s:find_git_root()
 
 " DetectIndent
 autocmd BufReadPost * :DetectIndent
+
+" Goyo
+function! s:goyo_enter()
+  " if executable('tmux') && strlen($TMUX)
+  "   silent !tmux set status off
+  "   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  " endif
+  " set noshowmode
+  " set noshowcmd
+  " set scrolloff=999
+  set nonumber norelativenumber
+endfunction
+
+function! s:goyo_leave()
+  " if executable('tmux') && strlen($TMUX)
+  "   silent !tmux set status on
+  "   silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  " endif
+  " set showmode
+  " set showcmd
+  " set scrolloff=5
+  set number relativenumber
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 
 " Ctags
 " let g:autotagTagsFile="tags"
