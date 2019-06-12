@@ -304,9 +304,9 @@ call deoplete#custom#var('around', {
 \ 'mark_changes': '[*]',
 \})
 
-call deoplete#custom#var('omni', 'input_patterns', {
-  \ 'pandoc': '@',
-\})
+" call deoplete#custom#var('omni', 'input_patterns', {
+"  \ 'pandoc': '@',
+"\})
 
 " Python nvim environment
 let g:python_host_prog = '~/.pyenv/versions/2.7.16/bin/python'
@@ -322,6 +322,7 @@ let g:python3_host_prog = '~/.pyenv/versions/3.7.0/bin/python'
 let g:pandoc#filetypes#handled = ["markdown"]
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#biblio#bibs = '/Users/steven/Dropbox/0-LITERATURE/bib.bib'
+let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#command#autoexec_on_writes = 0
 let g:pandoc#command#autoexec_command = "Pandoc latex --biblatex"
 
@@ -465,6 +466,34 @@ nnoremap <silent> <leader>s :Rg<CR>
 
 let g:fzf_tags_command = 'ctags -Ra -f tags .'
 set grepprg=rg\ --vimgrep
+
+" Citing with fzf
+let $FZF_BIBTEX_CACHEDIR = '/Users/steven/Dropbox/0-LITERATURE/bibtex_cache'
+let $FZF_BIBTEX_SOURCES = '/Users/steven/Dropbox/0-LITERATURE/bib.bib'
+
+function! s:bibtex_cite_sink(lines)
+    let r=system("bibtex-cite ", a:lines)
+    execute ':normal! i' . r
+endfunction
+
+function! s:bibtex_cite_sink_insert(lines)
+    let r=system("bibtex-cite ", a:lines)
+    execute ':normal! i' . r
+    call feedkeys('a', 'n')
+endfunction
+
+inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
+                        \ 'source': 'bibtex-ls',
+                        \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
+                        \ 'down': '40%',
+                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
+
+nnoremap <silent> <leader>c :call fzf#run({
+                        \ 'source': 'bibtex-ls',
+                        \ 'sink*': function('<sid>bibtex_cite_sink'),
+                        \ 'down': '40%',
+                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
+
 
 " Search project root
 function! s:find_git_root()

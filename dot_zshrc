@@ -43,6 +43,7 @@ export LC_ALL=en_US.UTF-8
 export PATH=/opt/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=~/.poetry/bin:$PATH
+export PATH=~/go/bin:$PATH
 export PATH=/usr/local/lib/ruby/gems/2.6.0/bin:$PATH
 
 # ALIASES / ENV
