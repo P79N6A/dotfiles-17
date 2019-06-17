@@ -32,8 +32,8 @@ source $ZSH/oh-my-zsh.sh
 # source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
 
 # activate external shell plugins
-eval "$(fasd --init auto)"
-eval "$(thefuck --alias)"
+# eval "$(fasd --init auto)"
+# eval "$(thefuck --alias)"
 eval "$(pyenv init -)"
 
 # LOCALE SET
