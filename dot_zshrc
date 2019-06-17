@@ -9,6 +9,7 @@ plugins=(\
 		fasd\
 		tmux\
 		vi-mode\
+		git\
 		git-flow\
 		httpie\
 		zsh-autosuggestions\
