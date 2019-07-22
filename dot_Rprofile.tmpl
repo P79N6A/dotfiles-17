@@ -6,7 +6,7 @@ if (interactive()) {
 .libPaths(c( "/usr/local/lib/R/libraries", .libPaths()))
 
 # enabling bioconductor repositiories for install.packages()
-setRepositories(ind=c(1,2,3,4))
+utils::setRepositories(ind=c(1,2,3,4))
 
 options(
   usethis.full_name = "{{ .name }}",
