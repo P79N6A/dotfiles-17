@@ -1,0 +1,20 @@
+if (interactive()) {
+  suppressMessages(require(devtools))
+}
+
+# setting default location for lib installs to be R version agnostic
+.libPaths(c( "/usr/local/lib/R/libraries", .libPaths()))
+
+# enabling bioconductor repositiories for install.packages()
+setRepositories(ind=c(1,2,3,4))
+
+options(
+  usethis.full_name = "{{ .name }}",
+  usethis.description = list(
+    `Authors@R` = 'person("{{ .name }}", email = "{{ .email }}", role = c("aut", "cre"),
+    comment = c())',
+    License = "MIT + file LICENSE",
+    Version = "0.0.1."
+  ),
+  usethis.protocol  = "ssh"
+)
