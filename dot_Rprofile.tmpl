@@ -1,12 +1,12 @@
-if (interactive()) {
-  suppressMessages(require(devtools))
-}
-
 # setting default location for lib installs to be R version agnostic
 .libPaths(c( "/usr/local/lib/R/libraries", .libPaths()))
 
 # enabling bioconductor repositiories for install.packages()
 utils::setRepositories(ind=c(1,2,3,4))
+
+if (interactive()) {
+  suppressMessages(require(devtools))
+}
 
 options(
   usethis.full_name = "{{ .name }}",
