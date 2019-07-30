@@ -506,7 +506,7 @@ endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
 
 " DetectIndent
-autocmd BufReadPost * :DetectIndent
+" autocmd BufReadPost * :DetectIndent
 
 " Goyo
 function! s:goyo_enter()
