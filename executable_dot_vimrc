@@ -124,20 +124,21 @@ set nowb
 
 
 " ================ Indentation ======================
-filetype plugin indent on
+" Indentation is managed via tpope indentation plugin
+" filetype plugin indent on
 " show existing tab with 4 spaces width
-set tabstop=4
+" set tabstop=4
 " when indenting with '>', use 4 spaces width
-set shiftwidth=4
+" set shiftwidth=4
 " On pressing tab, insert 4 spaces
-set expandtab
+" set expandtab
 
 " Auto indent pasted text
 "nnoremap p p=`]<C-o>
 "nnoremap P P=`]<C-o>
 
 set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
+" set linebreak    "Wrap lines at convenient points
 
 
 " ================ Scrolling ========================
@@ -191,15 +192,15 @@ Plug 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes an
 Plug 'tpope/vim-surround' "quoting/parenthesizing made simple
 Plug 'scrooloose/nerdtree' "A tree explorer plugin for vim
 Plug 'tpope/vim-sleuth' "detect indentation
-Plug 'ciaranm/detectindent'
-Plug 'tpope/vim-obsession' "continuously updated session files
+" Plug 'ciaranm/detectindent'
+" Plug 'tpope/vim-obsession' "continuously updated session files
 Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal
 
 " Commenting
 Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
 Plug 'kana/vim-repeat' "Vim plugin: Enable to repeat last change by non built-in commands
 Plug 'shougo/context_filetype.vim' "Context filetype library for Vim script
-Plug 'tpope/vim-commentary' "comment stuff out
+" Plug 'tpope/vim-commentary' "comment stuff out
 
 " Style
 Plug 'vim-airline/vim-airline' "lean & mean status/tabline for vim that's light as air
@@ -212,7 +213,7 @@ Plug 'luochen1990/rainbow' "Rainbow Parentheses Improved, shorter code, no level
 
 " Tex
 Plug 'lervag/vimtex' "A modern vim plugin for editing LaTeX files.
-Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8
+" Plug 'donRaphaco/neotex' "latex live preview - plugin for neovim and vim 8
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
@@ -235,10 +236,10 @@ Plug 'posva/vim-vue'
 " Completion / Snippets
 Plug 'w0rp/ale' "Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " Dark powered asynchronous completion framework for neovim/Vim8
-" Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer'} "A code-completion engine for Vim
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'Valloric/YouCompleteMe', { 'do' : './install.py --clang-completer'} "A code-completion engine for Vim
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 
 
 "" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
