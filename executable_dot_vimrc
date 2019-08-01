@@ -219,6 +219,10 @@ Plug 'lervag/vimtex' "A modern vim plugin for editing LaTeX files.
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+" Spelling
+" Plug 'inkarkat/vim-SpellCheck'
+" Plug 'inkarkat/vim-ingo-library'
+
 " Python
 Plug 'python/black' "The uncompromising Python code formatter
 
@@ -457,6 +461,9 @@ let g:airline#extensions#tagbar#enabled = 1
 " CTRL-P
 "let g:ctrlp_working_path_mode = 'ra'
 
+" Spell Check
+" let g:SpellCheck_DefineQuickfixMappings = 0
+
 " fzf
 nnoremap <silent> <leader>f :ProjectFiles<CR>
 nnoremap <silent> <leader><space> :Buffers<CR>
@@ -475,12 +482,12 @@ let $FZF_BIBTEX_CACHEDIR = '/Users/steven/Dropbox/0-LITERATURE/bibtex_cache'
 let $FZF_BIBTEX_SOURCES = '/Users/steven/Dropbox/0-LITERATURE/bib.bib'
 
 function! s:bibtex_cite_sink(lines)
-    let r=system("bibtex-cite ", a:lines)
+    let r=system("bibtex-cite -mode=pandocnoauthor ", a:lines)
     execute ':normal! i' . r
 endfunction
 
 function! s:bibtex_cite_sink_insert(lines)
-    let r=system("bibtex-cite ", a:lines)
+    let r=system("bibtex-cite -mode=pandocnoauthor ", a:lines)
     execute ':normal! i' . r
     call feedkeys('a', 'n')
 endfunction
@@ -496,6 +503,20 @@ nnoremap <silent> <leader>c :call fzf#run({
                         \ 'sink*': function('<sid>bibtex_cite_sink'),
                         \ 'down': '40%',
                         \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
+
+function! FzfSpellSink(word)
+  exe 'normal! "_ciw'.a:word
+endfunction
+
+function! FzfSpell()
+  let suggestions = spellsuggest(expand("<cword>"))
+  return fzf#run({ 'source': suggestions,
+                 \ 'sink': function("FzfSpellSink"),
+                 \ 'down': '40%',
+                 \ 'options': '--ansi --layout=reverse-list --multi --prompt "Change to> "'})
+endfunction
+
+nnoremap <silent> z= :call FzfSpell()<CR>
 
 
 " Search project root
