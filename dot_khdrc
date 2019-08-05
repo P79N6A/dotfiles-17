@@ -7,7 +7,7 @@ cmd + ctrl - r : open /Applications/RStudio.app
 
 cmd + ctrl - f : open /Applications/Firefox.app
 
-cmd + ctrl - s : open /Applications/Sourcetree.app
+cmd + ctrl - s : open /Applications/Fork.app
 cmd + ctrl - d : open /Applications/Dash.app
 
 cmd + ctrl - t : open /Applications/Things3.app
