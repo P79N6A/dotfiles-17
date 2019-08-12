@@ -222,6 +222,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Spelling
 " Plug 'inkarkat/vim-SpellCheck'
 " Plug 'inkarkat/vim-ingo-library'
+Plug 'rhysd/vim-grammarous'
 
 " Python
 Plug 'python/black' "The uncompromising Python code formatter
