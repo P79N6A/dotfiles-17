@@ -195,6 +195,7 @@ Plug 'tpope/vim-sleuth' "detect indentation
 " Plug 'ciaranm/detectindent'
 " Plug 'tpope/vim-obsession' "continuously updated session files
 Plug 'tpope/vim-fugitive'  "A Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-dispatch'  "A Git wrapper so awesome, it should be illegal
 
 " Commenting
 Plug 'tyru/caw.vim' "Vim comment plugin: supported operator/non-operator mappings, repeatable by dot-command, 300+ filetypes
