@@ -9,13 +9,10 @@ alias ctags='/usr/local/bin/ctags'
 #Shortcuts
 alias z='fasd_cd -d' # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
-
 alias se='find ~/scripts -type f | fzf --preview="head {}" --preview-window=right:70%:wrap | xargs $EDITOR'
-
 alias cl='clear && ls'
 alias cux='chmod u+x'
-#alias python='/usr/local/bin/python3'
-alias startpage='python2.7 -m SimpleHTTPServer 2343 &.'
+alias bu='brew update --force && brew upgrade --fetch-HEAD --display-times && brew cu -a -y --cleanup --no-brew-update'
 
 # program/script launch
 alias brightLow='ddcctl -d 1 -b 10'
@@ -25,15 +22,7 @@ alias brightHi='ddcctl -d 1 -b 70'
 # chezmoi dotfiles
 alias ce='chezmoi edit'
 alias ca='chezmoi add'
-alias cu=' chezmoi source stash && chezmoi update && chezmoi source stash apply && chezmoi source add . && chezmoi source commit && chezmoi source push && chezmoi apply'
-
-
-# media category
-# sonarr, radarr, plex, ...
-alias usenet-up='docker-compose -f ~/dotfiles/usenet-docker/docker-compose.yml up -d'
-alias usenet-down='docker-compose -f ~/dotfiles/usenet-docker/docker-compose.yml down'
-alias plex-up='docker-compose -f ~/dotfiles/plex-docker/docker-compose.yml up -d'
-alias plex-down='docker-compose -f ~/dotfiles/plex-docker/docker-compose.yml down'
+alias cu=' chezmoi source stash && chezmoi update && chezmoi source stash apply && chezmoi source add . && chezmoi source commit -v && chezmoi source push && chezmoi apply'
 
 # SSH
 alias ku-binf='ssh -t ndv995@login.binf.ku.dk "zsh -i"'
