@@ -59,7 +59,7 @@
                         ]
                     },
                     {
-                        "description": "CapsLock to Hyper/Escape",
+                        "description": "Caps Lock to Escape on single press, Control on press and hold.",
                         "manipulators": [
                             {
                                 "from": {
@@ -72,12 +72,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_shift",
-                                        "modifiers": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_option"
-                                        ]
+                                        "key_code": "left_control"
                                     }
                                 ],
                                 "to_if_alone": [

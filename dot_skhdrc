@@ -1,21 +1,21 @@
 # hyper = cmd + shift + alt + ctrl
 
-hyper - r : skhd --reload
+cmd + ctrl - r : skhd --reload
 
-hyper - return : open /Applications/kitty.app
-hyper - z : fkill amethyst && open /Applications/Amethyst.app
+cmd + ctrl - return : open /Applications/kitty.app
+cmd + ctrl - z : fkill amethyst && open /Applications/Amethyst.app
 
-hyper - r : open /Applications/RStudio.app
+cmd + ctrl - r : open /Applications/RStudio.app
 
-hyper - f : open /Applications/Firefox.app
+cmd + ctrl - f : open /Applications/Firefox.app
 
-hyper - s : open /Applications/Fork.app
-hyper - d : open /Applications/Dash.app
+cmd + ctrl - s : open /Applications/Fork.app
+cmd + ctrl - d : open /Applications/Dash.app
 
-hyper - t : open /Applications/Things3.app
-hyper - o : open /Applications/Microsoft\ OneNote.app
-hyper - n : open /Applications/Notability.app
-hyper - p : open /Applications/Preview.app
+cmd + ctrl - t : open /Applications/Things3.app
+cmd + ctrl - o : open /Applications/Microsoft\ OneNote.app
+cmd + ctrl - n : open /Applications/Notability.app
+cmd + ctrl - p : open /Applications/Preview.app
 
 #  NOTE(koekeishiya): A list of all built-in modifier and literal keywords can
 #                     be found at https://github.com/koekeishiya/skhd/issues/1
