@@ -29,4 +29,4 @@ shift + cmd + ctrl + alt - l : yabai -m window --move east
 
 # float / unfloat window and center on screen
 ctrl - t : yabai -m window --toggle float;\
-          yabai -m window --grid 4:4:1:1:2:2
+          yabai -m window --grid 6:6:1:1:4:4
