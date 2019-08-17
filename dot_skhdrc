@@ -1,5 +1,5 @@
 # GENERAL
-cmd + ctrl - r : skhd --reload
+# cmd + ctrl - r : skhd --reload
 # cmd + ctrl - z : fkill amethyst && open /Applications/Amethyst.app
 
 
