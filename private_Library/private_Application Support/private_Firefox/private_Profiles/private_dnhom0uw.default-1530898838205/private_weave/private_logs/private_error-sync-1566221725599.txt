@@ -1,0 +1,16 @@
+1566221125589	Sync.LogManager	DEBUG	Flushing file log
+1566221125605	Sync.LogManager	DEBUG	Log cleanup threshold time: 1565357125605
+1566221125629	Sync.LogManager	DEBUG	Done deleting files.
+1566221725581	Sync.Service	DEBUG	User-Agent: Firefox/68.0.2 (Intel Mac OS X 10.14) FxSync/1.70.0.20190813150448.desktop
+1566221725581	Sync.Service	INFO	Starting sync at 2019-08-19 15:35:25 in browser session xWTBfO7t2Nue
+1566221725582	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1566221725587	Sync.Status	INFO	Resetting Status.
+1566221725587	Sync.Status	DEBUG	Status.service: error.sync.failed => success.status_ok
+1566221725592	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1566221725592	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1566221725592	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1566221725592	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available
+1566221725593	Sync.SyncScheduler	DEBUG	Sync error count has exceeded 3; enforcing backoff.
+1566221725593	Sync.SyncScheduler	DEBUG	Starting client-initiated backoff. Next sync in 4283787 ms.
+1566221725594	Sync.SyncScheduler	DEBUG	Next sync in 4283787 ms. (why=client-backoff-schedule)
+1566221725598	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The lookup of the hostname failed"  nsresult: "0x804b001e (NS_ERROR_UNKNOWN_HOST)"  location: "<unknown>"  data: no] No traceback available

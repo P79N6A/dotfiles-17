@@ -1,0 +1,16 @@
+1566225628238	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1566225687905	Sync.SyncScheduler	DEBUG	Network link status changed to "changed". Offline?: false
+1566225688294	Sync.SyncScheduler	DEBUG	Network link status changed to "down". Offline?: false
+1566225688294	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1566225688295	Sync.SyncScheduler	DEBUG	Next sync in 3600000 ms. (why=schedule)
+1566225717884	Sync.Service	DEBUG	User-Agent: Firefox/68.0.2 (Intel Mac OS X 10.14) FxSync/1.70.0.20190813150448.desktop
+1566225717884	Sync.Service	INFO	Starting sync at 2019-08-19 16:41:57 in browser session xWTBfO7t2Nue
+1566225717885	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1566225717887	Sync.Status	INFO	Resetting Status.
+1566225717887	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1566225794014	Sync.Resource	WARN	GET request to https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections failed: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1566225794015	Sync.Status	DEBUG	Status.sync: success.sync => error.login.reason.network
+1566225794015	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed
+1566225794015	Sync.ErrorHandler	ERROR	Sync encountered an error: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available
+1566225794016	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=reschedule)
+1566225794019	Sync.Service	DEBUG	Exception calling anonymous function: [Exception... "The connection has timed out"  nsresult: "0x804b000e (NS_ERROR_NET_TIMEOUT)"  location: "<unknown>"  data: no] No traceback available

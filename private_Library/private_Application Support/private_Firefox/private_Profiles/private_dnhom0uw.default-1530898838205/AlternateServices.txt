@@ -1,0 +1,5 @@
+http:grammarist.com:80:.:	0	18129	http:grammarist.com:80:grammarist.com:443::n:1566396887:h2:y:1566200351:n::http://grammarist.com|
+http:cphhalf.dk:80:.:	0	18129	http:cphhalf.dk:80:cphhalf.dk:443::n:1566392230:h2:y:1566200351:n::https://sparta.dk|
+http:www.r-pkg.org:80:.:	0	18127	http:www.r-pkg.org:80:www.r-pkg.org:443::n:1566202081:h2:y:1566200351:n::https://indrajeetpatil.github.io|
+http:bl.ocks.org:80:.:	0	18126	http:bl.ocks.org:80:bl.ocks.org:443::n:1566127837:h2:y:1565956526:n::https://duckduckgo.com|
+http:sparta.dk:80:.:	0	18129	http:sparta.dk:80:sparta.dk:443::n:1566392258:h2:y:1566200351:n::https://sparta.dk|

@@ -1,0 +1,282 @@
+1566199933773	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
+1566200068010	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1566200068010	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1566200068013	Sync.Service	DEBUG	User-Agent: Firefox/68.0.2 (Intel Mac OS X 10.14) FxSync/1.70.0.20190813150448.desktop
+1566200068013	Sync.Service	INFO	Starting sync at 2019-08-19 09:34:28 in browser session qzfb28c__aOh
+1566200068014	Sync.SyncScheduler	DEBUG	Clearing sync triggers and the global score.
+1566200068020	Sync.Status	INFO	Resetting Status.
+1566200068020	Sync.Status	DEBUG	Status.service: success.status_ok => success.status_ok
+1566200068593	Sync.Resource	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/collections
+1566200068595	Sync.Service	DEBUG	Fetching server configuration: https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/configuration
+1566200068771	Sync.Resource	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/info/configuration
+1566200068772	Sync.Service	DEBUG	Fetching global metadata record
+1566200068773	Sync.Service	DEBUG	Weave Version: 1.70.0 Local Storage: 5 Remote Storage: 5
+1566200068773	Sync.Service	DEBUG	Fetching and verifying -- or generating -- symmetric keys.
+1566200068773	Sync.Service	INFO	Testing info/collections: {"addons":1564564768.1,"tabs":1566169419.6,"clients":1566030288.57,"crypto":1499425014.97,"forms":1566167493.76,"meta":1558615339.37,"bookmarks":1565982310.08,"prefs":1563174603.52,"history":1566165231.88}
+1566200068773	Sync.CollectionKeyManager	INFO	Testing for updateNeeded. Last modified: 1499425014.97
+1566200068773	Sync.Synchronizer	DEBUG	Refreshing client list.
+1566200068774	Sync.Engine.Clients	INFO	0 outgoing items pre-reconciliation
+1566200068774	Sync.Engine.Clients	DEBUG	Resetting clients last sync time
+1566200068953	Sync.Collection	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/storage/clients?full=1&limit=1000
+1566200068958	Sync.Engine.Clients	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 3 reconciled.
+1566200068960	Services.Common.RESTRequest	TRACE	local time, offset: 1566200068960, -211
+1566200068961	Services.Common.RESTRequest	DEBUG	GET request to https://api.accounts.firefox.com/v1/account/devices
+1566200068961	Services.Common.RESTRequest	TRACE	HTTP Header authorization: ***** (suppressed)
+1566200068961	Services.Common.RESTRequest	TRACE	HTTP Header content-type: text/plain
+1566200068961	Services.Common.RESTRequest	TRACE	HTTP Header accept-language: de,en-us,en
+1566200069507	Services.Common.RESTRequest	TRACE	onStartRequest: GET https://api.accounts.firefox.com/v1/account/devices
+1566200069507	Services.Common.RESTRequest	TRACE	Channel for GET https://api.accounts.firefox.com/v1/account/devices returned status code 0
+1566200069508	Services.Common.RESTRequest	DEBUG	GET https://api.accounts.firefox.com/v1/account/devices 200
+1566200069508	Hawk	DEBUG	(Response) /account/devices: code: 200 - Status text: OK
+1566200069508	Services.Common.RESTResponse	TRACE	Processing response headers.
+1566200069508	Hawk	DEBUG	Clock offset vs https://api.accounts.firefox.com/v1: -508
+1566200069509	Sync.Engine.Clients	DEBUG	Refreshing the known stale clients list
+1566200069510	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for undefined
+1566200069516	Sync.Synchronizer	INFO	Updating enabled engines: 3 clients.
+1566200069518	Sync.Synchronizer	INFO	Syncing all enabled engines.
+1566200069519	Sync.Engine.Prefs	INFO	0 outgoing items pre-reconciliation
+1566200069521	Sync.Engine.Prefs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200069522	Sync.Engine.Tabs	INFO	0 outgoing items pre-reconciliation
+1566200069522	Sync.Engine.Tabs	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200069524	Sync.Engine.Bookmarks	DEBUG	Checking if server sync ID Yl5kaaf6qgNt matches existing
+1566200069525	Sync.Engine.Bookmarks	INFO	0 outgoing items pre-reconciliation
+1566200069527	Sync.Engine.Bookmarks	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200069529	Sync.Engine.Bookmarks.BookmarkSyncUtils	DEBUG	pushChanges: Processed change records: {"weak":0,"skipped":0,"updated":0}
+1566200069530	Sync.Engine.Addons	DEBUG	Refreshing reconciler state
+1566200069530	Sync.AddonsReconciler	INFO	Refreshing global state from AddonManager.
+1566200069533	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web to Plex (version=3.4, id={05243336-ce19-46df-95af-680070c96134})
+1566200069533	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Make Medium Readable Again (version=1.5.2, id={28d1ed97-5ff6-432b-a26d-61896fe2cbed})
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Wikiwand: Wikipedia Modernized (version=5.0.2, id=jid1-D7momAzRw417Ag@jetpack)
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon New Tab Homepage (version=0.6.2, id={66E978CD-981F-47DF-AC42-E3CF417C1467})
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Google Container (version=1.4.0, id=@contain-google)
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Vimium (version=1.64.6, id={d7742d87-e61d-4b78-b8a1-b469842139fa})
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon TST Colored Tabs (version=0.6, id=tst-colored-tabs@murz)
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon CaretTab - New Tab Clock and Date (version=2.3.1, id={1ab49626-2e16-405b-ad65-dcaab8decd7b})
+1566200069534	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Keepa - Amazon Price Tracker (version=3.31, id=amptra@keepa.com)
+1566200069535	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Stylish - Custom themes for any website (version=3.1.8, id={46551EC9-40F0-4e47-8E18-8E5CF550CFB8})
+1566200069535	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Reddit Enhancement Suite (version=5.16.10, id=jid1-xUfzOsOFlzSOXg@jetpack)
+1566200069535	Sync.AddonsReconciler	DEBUG	Rectifying state for addon In My Pocket (version=0.10.6, id={cd7e22de-2e34-40f0-aeff-cec824cbccac})
+1566200069535	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Tab Session Manager (version=4.5.2, id=Tab-Session-Manager@sienori)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Mediumship (version=2.3, id={6c933dfc-7a7f-44d8-a945-48ec4e093c94})
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon 1Password extension (desktop app required) (version=4.7.5.90, id=onepassword4@agilebits.com)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Vue.js devtools (version=5.1.1, id={5caff8cc-3d2e-4110-a88a-003cc85b3858})
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Momentum (version=1.10.1, id=momentum@momentumdash.com)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Auto Tab Discard (version=0.3.2.1, id={c2c003ee-bd69-42a2-b0e9-6f34222cb046})
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Default Bookmark Folder (version=2.10.1, id=default-bookmark-folder@gustiaux.com)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Privacy Badger (version=2019.7.1.1, id=jid1-MnnxcxisBPnSXQ@jetpack)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Facebook Container (version=2.0.1, id=@contain-facebook)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon HTTPS Everywhere (version=2019.6.27, id=https-everywhere@eff.org)
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon automaticDark - Time-Based Theme Changer (version=1.0.7, id={9ed7d361-ccd9-4cad-9846-977da2651fb5})
+1566200069536	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Private Bookmarks (version=0.1.19a, id=private-bookmarks@rharel)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Zotero Connector (version=5.0.57, id=zotero@chnm.gmu.edu)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon 1Password X – Password Manager (version=1.15.7, id={d634138d-c276-4fc8-924b-40a0ea21d284})
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon KeePassXC-Browser (version=1.4.7, id=keepassxc-browser@keepassxc.org)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Norton Safe Web (version=3.9.0.9, id=nortonsafeweb@symantec.com)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon uBlock Origin (version=1.21.2, id=uBlock0@raymondhill.net)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon SearchPreview (version=12.2, id={EF522540-89F5-46b9-B6FE-1829E2B572C6})
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Forget Me Not - Forget cookies & other data (version=2.2.4, id=forget-me-not@lusito.info)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Tab flip for Tree Style Tab (version=1.4.0, id={724545b6-7e17-4fa2-96e0-71eddf3c3319})
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Norton Password Manager (version=6.5.0.4, id=idsafe@norton.com)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Tree Style Tab (version=3.1.7, id=treestyletab@piro.sakura.ne.jp)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Minimal Twitter (version=2.8, id={e7476172-097c-4b77-b56e-f56a894adca9})
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Dark Reader (version=4.7.16, id=addon@darkreader.org)
+1566200069537	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Form Autofill (version=1.0, id=formautofill@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Screenshots (version=39.0.0, id=screenshots@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon WebCompat Reporter (version=1.1.0, id=webcompat-reporter@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Firefox Monitor (version=3.0, id=fxmonitor@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Default (version=1.0, id=default-theme@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Light (version=1.0, id=firefox-compact-light@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Dark (version=1.0, id=firefox-compact-dark@mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Amazon.com (version=1.1, id=amazondotcom@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Bing (version=1.0, id=bing@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Google (version=1.0, id=google@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Twitter (version=1.0, id=twitter@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Wikipedia (en) (version=1.0, id=wikipedia@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon DuckDuckGo (version=1.0, id=ddg@search.mozilla.org)
+1566200069538	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Web Compat (version=5.0.2, id=webcompat@mozilla.org)
+1566200069539	Sync.AddonsReconciler	DEBUG	Rectifying state for addon OpenH264 Video Codec provided by Cisco Systems, Inc. (version=1.8.1, id=gmp-gmpopenh264)
+1566200069539	Sync.AddonsReconciler	DEBUG	Rectifying state for addon Widevine Content Decryption Module provided by Google Inc. (version=4.10.1440.18, id=gmp-widevinecdm)
+1566200069541	Sync.AddonsReconciler	INFO	Saving reconciler state to file: addonsreconciler
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069545	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069546	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-light@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons.Store	DEBUG	firefox-compact-dark@mozilla.org not syncable: vetoed by the addon manager.
+1566200069547	Sync.Engine.Addons	INFO	0 outgoing items pre-reconciliation
+1566200069731	Sync.Collection	DEBUG	GET success 200 https://sync-535-us-west-2.sync.services.mozilla.com/1.5/80856074/storage/addons?full=1&sort=newest&ids={70b6811c-7156-ac49-8e4e-23908e21fb7d}&limit=1000
+1566200070300	Sync.AddonUtils	INFO	Found 0 / 1 add-ons during repository search.
+1566200070300	Sync.Engine.Addons.Store	WARN	Failed to apply incoming record {70b6811c-7156-ac49-8e4e-23908e21fb7d}: Error: Add-on not found after install: {d40f5e7b-d2cf-4856-b441-cc613eeffbe3}(resource://services-sync/engines/addons.js:340:13) JS Stack trace: create@addons.js:340:13
+1566200070301	Sync.Engine.Addons	INFO	Records: 1 applied, 0 successfully, 1 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200070303	Sync.Engine.Forms	INFO	0 outgoing items pre-reconciliation
+1566200070304	Sync.Engine.Forms	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200070305	Sync.Engine.History	DEBUG	Checking if server sync ID lHZb_xg5j1yN matches existing
+1566200070306	Sync.Engine.History	INFO	0 outgoing items pre-reconciliation
+1566200070308	Sync.Engine.History	INFO	Records: 0 applied, 0 successfully, 0 failed to apply, 0 newly failed to apply, 0 reconciled.
+1566200070310	Sync.Engine.Extension-Storage	DEBUG	Syncing extension settings for ["default-bookmark-folder@gustiaux.com","https-everywhere@eff.org","forget-me-not@lusito.info","{c2c003ee-bd69-42a2-b0e9-6f34222cb046}","{d7742d87-e61d-4b78-b8a1-b469842139fa}","{46551EC9-40F0-4e47-8E18-8E5CF550CFB8}","@contain-google","{1ab49626-2e16-405b-ad65-dcaab8decd7b}","amptra@keepa.com","Tab-Session-Manager@sienori","private-bookmarks@rharel","addon@darkreader.org","treestyletab@piro.sakura.ne.jp","tst-colored-tabs@murz"]
+1566200070314	Sync.CollectionKeyManager	INFO	Setting collection keys contents. Our last modified: 0, input modified: 1564486057630.
+1566200070314	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for [default]
+1566200070315	Sync.CollectionKeyManager	INFO	Processing downloaded per-collection keys.
+1566200070315	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for particle@particlecore.github.io
+1566200070315	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {46551EC9-40F0-4e47-8E18-8E5CF550CFB8}
+1566200070315	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+1566200070315	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for https-everywhere@eff.org
+1566200070315	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {d7742d87-e61d-4b78-b8a1-b469842139fa}
+1566200070316	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {05243336-ce19-46df-95af-680070c96134}
+1566200070316	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for jid1-93CWPmRbVPjRQA@jetpack
+1566200070316	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {28d1ed97-5ff6-432b-a26d-61896fe2cbed}
+1566200070316	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for addon@darkreader.org
+1566200070316	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for @contain-google
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for private-bookmarks@rharel
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for default-bookmark-folder@gustiaux.com
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tilepages-we@DW-dev
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for treestyletab@piro.sakura.ne.jp
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {3c078156-979c-498b-8990-85f7987dd929}
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {ad983116-67d4-49d3-85ff-e7f46ab73dac}
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {c2c003ee-bd69-42a2-b0e9-6f34222cb046}
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for tst-colored-tabs@murz
+1566200070317	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {1ab49626-2e16-405b-ad65-dcaab8decd7b}
+1566200070318	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {beb1b1c0-32b9-47d8-bbd1-f65bed4e7c22}
+1566200070318	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for amptra@keepa.com
+1566200070318	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for Tab-Session-Manager@sienori
+1566200070318	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for {e7476172-097c-4b77-b56e-f56a894adca9}
+1566200070318	Sync.BulkKeyBundle	INFO	BulkKeyBundle being created for forget-me-not@lusito.info
+1566200070318	Sync.CollectionKeyManager	INFO	Clearing collection keys...
+1566200070318	Sync.CollectionKeyManager	INFO	Saving downloaded keys.
+1566200070318	Sync.CollectionKeyManager	INFO	Bumping last modified to 1564486057630
+1566200070345	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070345	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070345	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070347	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070347	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070347	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070349	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070350	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070350	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070352	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070352	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070352	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070354	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070354	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070354	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070357	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070357	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070357	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070360	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070360	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070360	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070362	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070362	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070362	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070364	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070364	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070364	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070366	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070366	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070366	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070369	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070369	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070369	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070373	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070374	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070374	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070375	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070375	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070376	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200070377	FirefoxAccounts	DEBUG	getOAuthToken enter
+1566200070377	FirefoxAccounts	TRACE	getCachedToken returning cached token
+1566200070377	FirefoxAccounts	DEBUG	getOAuthToken returning a cached token
+1566200074397	Sync.SyncScheduler	DEBUG	Network link status changed to "up". Offline?: false
+1566200074398	Sync.SyncScheduler	DEBUG	Network link looks up. Syncing.
+1566200074399	Sync.Service	DEBUG	User-Agent: Firefox/68.0.2 (Intel Mac OS X 10.14) FxSync/1.70.0.20190813150448.desktop
+1566200074399	Sync.Service	INFO	Starting sync at 2019-08-19 09:34:34 in browser session qzfb28c__aOh
+1566200074399	Sync.Service	DEBUG	Exception calling anonymous function: LockException: Could not acquire lock. Label: "service.js: sync".(resource://services-sync/util.js:41:5) JS Stack trace: LockException@util.js:41:5
+throwLockException@util.js:115:11
+WrappedLock@util.js:129:15
+_lockedSync@service.js:1164:8
+sync/<@service.js:1118:18
+WrappedCatch@util.js:103:27
+sync@service.js:1119:7
+1566200074400	Sync.Service	INFO	Cannot start sync: already syncing?
+1566200088774	Sync.Engine.Extension-Storage	ERROR	Syncing {c2c003ee-bd69-42a2-b0e9-6f34222cb046}: request failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1566200088774	Sync.Engine.Extension-Storage	WARN	Syncing failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1566200088775	Sync.Status	DEBUG	Status for engine extension-storage: error.engine.reason.unknown_fail
+1566200088775	Sync.Status	DEBUG	Status.service: success.status_ok => error.sync.failed_partial
+1566200088775	Sync.ErrorHandler	DEBUG	extension-storage failed: TypeError: NetworkError when attempting to fetch resource. No traceback available
+1566200088776	Sync.Doctor	INFO	Skipping check of prefs - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of tabs - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of bookmarks - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of addons - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of forms - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of history - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping check of extension-storage - disabled via preferences
+1566200088776	Sync.Doctor	INFO	Skipping validation: no engines qualify
+1566200088777	Sync.Synchronizer	INFO	Sync completed at 2019-08-19 09:34:48 after 20.76 secs.
+1566200088778	Sync.Declined	DEBUG	Handling remote declined: ["passwords"]
+1566200088778	Sync.Declined	DEBUG	Handling local declined: ["passwords"]
+1566200088778	Sync.Declined	DEBUG	Declined changed? false
+1566200088778	Sync.Service	INFO	No change to declined engines. Not reuploading meta/global.
+1566200088778	Sync.ErrorHandler	ERROR	Some engines did not sync correctly.
+1566200088780	Sync.SyncScheduler	DEBUG	Next sync in 600000 ms. (why=schedule)
